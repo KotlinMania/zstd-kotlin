@@ -257,7 +257,9 @@ kotlin {
         namespace = "io.github.kotlinmania.zstd"
         compileSdk = projectCompileSdk.toInt()
         minSdk = 24
-        withHostTestBuilder {}.configure {}
+        withHostTestBuilder {
+            sourceSetTreeName = "test"
+        }.configure {}
         withDeviceTestBuilder {
             sourceSetTreeName = "test"
         }
