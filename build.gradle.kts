@@ -50,6 +50,16 @@ val androidSdkManager = projectAndroidSdkDir.resolve(
     },
 )
 val androidSdkInstallMarker = projectAndroidSdkDir.resolve(".install-complete")
+val requiredAndroidSdkPackageDirs = listOf(
+    projectAndroidSdkDir.resolve("platform-tools"),
+    projectAndroidSdkDir.resolve("platforms/android-$projectCompileSdk"),
+    projectAndroidSdkDir.resolve("build-tools/$projectAndroidBuildTools"),
+)
+
+fun isProjectAndroidSdkInstalled(): Boolean =
+    androidSdkInstallMarker.exists() &&
+        androidSdkManager.exists() &&
+        requiredAndroidSdkPackageDirs.all { it.exists() }
 
 fun writeAndroidLocalProperties() {
     val sdkDirPropertyValue = projectAndroidSdkDir.absolutePath.replace("\\", "/")
@@ -114,7 +124,7 @@ fun downloadAndroidCommandLineTools() {
 }
 
 fun installProjectAndroidSdk(execOperations: ExecOperations) {
-    if (androidSdkInstallMarker.exists() && androidSdkManager.exists()) {
+    if (isProjectAndroidSdkInstalled()) {
         writeAndroidLocalProperties()
         println("setup-android-sdk: SDK already installed at $projectAndroidSdkDir")
         return
@@ -425,6 +435,93 @@ tasks.register("test") {
     )
 
     dependsOn(defaultTestTasks.mapNotNull { taskName -> tasks.findByName(taskName) })
+}
+
+val fullTargetBuildTaskNames = setOf(
+    "compileAndroidMain",
+    "compileAndroidHostTest",
+    "compileAndroidDeviceTest",
+    "assembleAndroidMain",
+    "assembleUnitTest",
+    "assembleAndroidTest",
+    "assembleAndroidDeviceTest",
+    "testAndroidHostTest",
+    "jvmMainClasses",
+    "jvmTestClasses",
+    "jsMainClasses",
+    "jsTestClasses",
+    "wasmJsMainClasses",
+    "wasmJsTestClasses",
+    "wasmWasiMainClasses",
+    "wasmWasiTestClasses",
+    "androidNativeArm32Binaries",
+    "androidNativeArm32TestBinaries",
+    "androidNativeArm64Binaries",
+    "androidNativeArm64TestBinaries",
+    "androidNativeX64Binaries",
+    "androidNativeX64TestBinaries",
+    "androidNativeX86Binaries",
+    "androidNativeX86TestBinaries",
+    "iosArm64Binaries",
+    "iosArm64TestBinaries",
+    "iosSimulatorArm64Binaries",
+    "iosSimulatorArm64TestBinaries",
+    "iosX64Binaries",
+    "iosX64TestBinaries",
+    "linuxArm64Binaries",
+    "linuxArm64TestBinaries",
+    "linuxX64Binaries",
+    "linuxX64TestBinaries",
+    "macosArm64Binaries",
+    "macosArm64TestBinaries",
+    "mingwX64Binaries",
+    "mingwX64TestBinaries",
+    "tvosArm64Binaries",
+    "tvosArm64TestBinaries",
+    "tvosSimulatorArm64Binaries",
+    "tvosSimulatorArm64TestBinaries",
+    "watchosArm32Binaries",
+    "watchosArm32TestBinaries",
+    "watchosArm64Binaries",
+    "watchosArm64TestBinaries",
+    "watchosDeviceArm64Binaries",
+    "watchosDeviceArm64TestBinaries",
+    "watchosSimulatorArm64Binaries",
+    "watchosSimulatorArm64TestBinaries",
+    "assembleZstdXCFramework",
+    "assembleZstdDebugXCFramework",
+    "assembleZstdReleaseXCFramework",
+    "assembleDebugIosFatFrameworkForZstdXCFramework",
+    "assembleReleaseIosFatFrameworkForZstdXCFramework",
+    "assembleDebugIosSimulatorFatFrameworkForZstdXCFramework",
+    "assembleReleaseIosSimulatorFatFrameworkForZstdXCFramework",
+    "assembleDebugMacosFatFrameworkForZstdXCFramework",
+    "assembleReleaseMacosFatFrameworkForZstdXCFramework",
+    "assembleDebugTvosFatFrameworkForZstdXCFramework",
+    "assembleReleaseTvosFatFrameworkForZstdXCFramework",
+    "assembleDebugTvosSimulatorFatFrameworkForZstdXCFramework",
+    "assembleReleaseTvosSimulatorFatFrameworkForZstdXCFramework",
+    "assembleDebugWatchosFatFrameworkForZstdXCFramework",
+    "assembleReleaseWatchosFatFrameworkForZstdXCFramework",
+    "assembleDebugWatchosSimulatorFatFrameworkForZstdXCFramework",
+    "assembleReleaseWatchosSimulatorFatFrameworkForZstdXCFramework",
+)
+
+tasks.named("build") {
+    dependsOn(fullTargetBuildTaskNames)
+}
+
+afterEvaluate {
+    tasks.named("build") {
+        dependsOn(
+            tasks.matching {
+                name.endsWith("MainClasses") ||
+                    name.endsWith("TestClasses") ||
+                    name.endsWith("Binaries") ||
+                    name.endsWith("XCFramework")
+            },
+        )
+    }
 }
 
 // The generated Wasm-WASI Node test runner cannot see the filesystem unless
