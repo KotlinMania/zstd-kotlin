@@ -82,20 +82,8 @@ including `zstd-rs`.
 
 # Compile it yourself
 
-`zstd` is included as a submodule. To get everything during your clone, use:
-
-```
-git clone https://github.com/gyscos/zstd-rs --recursive
-```
-
-Or, if you cloned it without the `--recursive` flag,
-call this from inside the repository:
-
-```
-git submodule update --init
-```
-
-Then, running `cargo build` should take care
+Upstream `zstd-rs` expects the native `zstd` source tree to already be present.
+With a prepared checkout, running `cargo build` should take care
 of building the C library and linking to it.
 
 # Build-time bindgen
