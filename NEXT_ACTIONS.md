@@ -4,14 +4,14 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 13/24 (54.2%)
-- **Function parity:** 77/166 matched (target 124) — 46.4%
-- **Class/type parity:** 13/23 matched (target 45) — 56.5%
-- **Combined symbol parity:** 90/189 matched (target 169) — 47.6%
-- **Average inline-code cosine:** 0.36 (function body across 10 matched files)
-- **Average documentation cosine:** 0.39 (doc text across 10 matched files)
+- **Files Present:** 11/24 (45.8%)
+- **Function parity:** 71/166 matched (target 108) — 42.8%
+- **Class/type parity:** 13/23 matched (target 42) — 56.5%
+- **Combined symbol parity:** 84/189 matched (target 150) — 44.4%
+- **Average inline-code cosine:** 0.40 (function body across 8 matched files)
+- **Average documentation cosine:** 0.49 (doc text across 8 matched files)
 - **Cheat-zeroed Files:** 3
-- **Critical Issues:** 13 files with <0.60 function similarity
+- **Critical Issues:** 11 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
 
@@ -48,16 +48,14 @@ Every matched file is listed below with function and type symbol parity.
 - **Similarity:** 0.33
 - **Dependents:** 1
 - **Priority Score:** 1071306.8
-- **Functions:** 5/11 matched (target 13)
+- **Functions:** 5/11 matched (target 6)
 - **Missing functions:** `reader_mut`, `reader`, `into_inner`, `fill_buf`, `test_noop`, `test_compress`
-- **Types:** 1/2 matched
+- **Types:** 1/2 matched (target 1)
 - **Missing types:** `State`
 - **Tests:** 0/2 matched
 - **Provenance warning:** port-lint provenance header matched only after fallback normalization: `stream/zio/reader.rs` vs expected `stream/zio/reader.rs`
-- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `stream/zio/reader.rs` vs expected `stream/zio/reader.rs`
 - **Proposed provenance header:** `// port-lint: source stream/zio/reader.rs` (current: `// port-lint: source stream/zio/reader.rs`)
-- **Proposed provenance header:** `// port-lint: source stream/zio/reader.rs` (current: `// port-lint: source stream/zio/reader.rs`)
-- **Lint issues:** 2
+- **Lint issues:** 1
 
 ### 3. bulk.compressor
 
@@ -101,22 +99,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Proposed provenance header:** `// port-lint: source stream/write/mod.rs` (current: `// port-lint: source stream/write/mod.rs`)
 - **Lint issues:** 1
 
-### 6. stream.tests
-
-- **Target:** `stream.StreamTest [PROVENANCE-FALLBACK]`
-- **Similarity:** 0.15
-- **Dependents:** 0
-- **Priority Score:** 121608.5
-- **Functions:** 4/16 matched (target 4)
-- **Missing functions:** `test_flush`, `test_try_finish`, `test_write_after_try_finish`, `setup_try_finish`, `test_failing_write`, `test_invalid_frame`, `test_incomplete_frame`, `test_cli_compatibility`, `test_legacy`, `test_ll_source`, `reader_to_writer`, `test_finish_empty_encoder`
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-- **Tests:** 3/14 matched
-- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `stream/tests.rs` vs expected `stream/tests.rs`
-- **Proposed provenance header:** `// port-lint: source stream/tests.rs` (current: `// port-lint: source stream/tests.rs`)
-- **Lint issues:** 1
-
-### 7. read.mod
+### 6. read.mod
 
 - **Target:** `read.Decoder [STUB] [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.00
@@ -130,7 +113,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Proposed provenance header:** `// port-lint: source stream/read/mod.rs` (current: `// port-lint: source stream/read/mod.rs`)
 - **Lint issues:** 1
 
-### 8. stream.raw
+### 7. stream.raw
 
 - **Target:** `raw.Raw [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.48
@@ -145,7 +128,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Proposed provenance header:** `// port-lint: source stream/raw.rs` (current: `// port-lint: source stream/raw.rs`)
 - **Lint issues:** 2
 
-### 9. lib
+### 8. lib
 
 - **Target:** `zstd.Lib [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.24
@@ -157,27 +140,12 @@ Every matched file is listed below with function and type symbol parity.
 - **Missing types:** _none_
 - **Tests:** 1/3 matched
 - **Provenance warning:** port-lint provenance header matched only after fallback normalization: `lib.rs` vs expected `lib.rs`
-- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `lib.rs` vs expected `lib.rs`
+- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `tests:lib.rs` vs expected `lib.rs`
 - **Proposed provenance header:** `// port-lint: source lib.rs` (current: `// port-lint: source lib.rs`)
-- **Proposed provenance header:** `// port-lint: source lib.rs` (current: `// port-lint: source lib.rs`)
+- **Proposed provenance header:** `// port-lint: tests lib.rs` (current: `// port-lint: tests lib.rs`)
 - **Lint issues:** 2
 
-### 10. bulk.tests
-
-- **Target:** `bulk.BulkTest [PROVENANCE-FALLBACK]`
-- **Similarity:** 0.26
-- **Dependents:** 0
-- **Priority Score:** 10307.4
-- **Functions:** 2/3 matched (target 5)
-- **Missing functions:** `test_direct`
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-- **Tests:** 2/3 matched
-- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `bulk/tests.rs` vs expected `bulk/tests.rs`
-- **Proposed provenance header:** `// port-lint: source bulk/tests.rs` (current: `// port-lint: source bulk/tests.rs`)
-- **Lint issues:** 1
-
-### 11. dict
+### 9. dict
 
 - **Target:** `dict.Dict [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.52
@@ -189,12 +157,12 @@ Every matched file is listed below with function and type symbol parity.
 - **Missing types:** _none_
 - **Tests:** 1/1 matched
 - **Provenance warning:** port-lint provenance header matched only after fallback normalization: `dict.rs` vs expected `dict.rs`
-- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `dict.rs` vs expected `dict.rs`
+- **Provenance warning:** port-lint provenance header matched only after fallback normalization: `tests:dict.rs` vs expected `dict.rs`
 - **Proposed provenance header:** `// port-lint: source dict.rs` (current: `// port-lint: source dict.rs`)
-- **Proposed provenance header:** `// port-lint: source dict.rs` (current: `// port-lint: source dict.rs`)
+- **Proposed provenance header:** `// port-lint: tests dict.rs` (current: `// port-lint: tests dict.rs`)
 - **Lint issues:** 2
 
-### 12. bulk.mod
+### 10. bulk.mod
 
 - **Target:** `bulk.Bulk [STUB] [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.00
@@ -208,7 +176,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Proposed provenance header:** `// port-lint: source bulk/mod.rs` (current: `// port-lint: source bulk/mod.rs`)
 - **Lint issues:** 1
 
-### 13. stream.functions
+### 11. stream.functions
 
 - **Target:** `stream.Functions [PROVENANCE-FALLBACK]`
 - **Similarity:** 0.50
