@@ -146,12 +146,13 @@ public fun mapErrorCode(code: Int): Exception = IllegalArgumentException("Zstand
 /**
  * Decompress from the given source.
  */
-public fun decodeAll(source: ByteArray): ByteArray = io.github.kotlinmania.zstd.stream.decodeAll(source)
+public fun decodeAll(source: ByteArray): ByteArray =
+    io.github.kotlinmania.zstd.stream
+        .decodeAll(source)
 
 /**
  * Compress all data from the given source.
  */
 public fun encodeAll(source: ByteArray, level: Int = DEFAULT_COMPRESSION_LEVEL): ByteArray =
-    io.github.kotlinmania.zstd.stream.encodeAll(source, level)
-
-
+    io.github.kotlinmania.zstd.stream
+        .encodeAll(source, level)

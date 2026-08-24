@@ -76,8 +76,8 @@ public class Decompressor(
             return d
         }
 
-        public fun upperBound(data: ByteArray): Int? {
-            return if (data.size >= 4) {
+        public fun upperBound(data: ByteArray): Int? =
+            if (data.size >= 4) {
                 val b0 = data[0].toInt() and 0xFF
                 val b1 = data[1].toInt() and 0xFF
                 val b2 = data[2].toInt() and 0xFF
@@ -87,6 +87,5 @@ public class Decompressor(
             } else {
                 null
             }
-        }
     }
 }
