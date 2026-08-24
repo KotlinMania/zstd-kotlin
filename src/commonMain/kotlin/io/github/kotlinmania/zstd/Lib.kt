@@ -137,3 +137,21 @@ public sealed class DParameter {
         public val format: FrameFormat,
     ) : DParameter()
 }
+
+/**
+ * Returns an exception representing the specified error code.
+ */
+public fun mapErrorCode(code: Int): Exception = IllegalArgumentException("Zstandard error code $code")
+
+/**
+ * Decompress from the given source.
+ */
+public fun decodeAll(source: ByteArray): ByteArray = io.github.kotlinmania.zstd.stream.decodeAll(source)
+
+/**
+ * Compress all data from the given source.
+ */
+public fun encodeAll(source: ByteArray, level: Int = DEFAULT_COMPRESSION_LEVEL): ByteArray =
+    io.github.kotlinmania.zstd.stream.encodeAll(source, level)
+
+

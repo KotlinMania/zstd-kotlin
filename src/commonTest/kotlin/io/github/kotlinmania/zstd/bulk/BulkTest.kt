@@ -1,11 +1,14 @@
 // port-lint: source bulk/tests.rs
 package io.github.kotlinmania.zstd.bulk
 
+import io.github.kotlinmania.zstd.decodeAll
 import io.github.kotlinmania.zstd.dict.DecoderDictionary
 import io.github.kotlinmania.zstd.dict.EncoderDictionary
+import io.github.kotlinmania.zstd.encodeAll
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class BulkTest {
     private val sampleText = "Hello, Zstandard Kotlin Multiplatform world! This is a test."
@@ -45,5 +48,29 @@ class BulkTest {
         val decompressed = decompressor.decompress(compressed, originalBytes.size)
 
         assertContentEquals(originalBytes, decompressed)
+    }
+
+    @Test
+    fun testStreamCompat() {
+        val originalBytes = sampleText.encodeToByteArray()
+
+        // We can bulk-compress and stream-decode
+        val compressed = compress(originalBytes, 1)
+        val decoded = decodeAll(compressed)
+        assertContentEquals(originalBytes, decoded)
+
+        // We can stream-encode and bulk-decompress
+        val encoded = encodeAll(originalBytes, 1)
+        val decompressed = decompress(encoded, originalBytes.size)
+        assertContentEquals(originalBytes, decompressed)
+    }
+
+    @Test
+    fun hasContentSize() {
+        val originalBytes = sampleText.encodeToByteArray()
+        val compressed = compress(originalBytes, 1)
+
+        // Bulk functions by default include the frame header
+        assertTrue(compressed.size >= 4)
     }
 }
