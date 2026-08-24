@@ -1,4 +1,4 @@
-// port-lint: source dict.rs
+// port-lint: tests dict.rs
 package io.github.kotlinmania.zstd.dict
 
 import kotlin.test.Test
@@ -46,11 +46,15 @@ class DictTest {
         val dict = fromFiles(samples, 4000)
 
         for (content in samples) {
-            val enc = io.github.kotlinmania.zstd.stream.write.Encoder.withDictionary(1, dict)
+            val enc =
+                io.github.kotlinmania.zstd.stream.write.Encoder
+                    .withDictionary(1, dict)
             enc.write(content)
             val buffer = enc.finish()
 
-            val dec = io.github.kotlinmania.zstd.stream.read.Decoder.withDictionary(buffer, dict)
+            val dec =
+                io.github.kotlinmania.zstd.stream.read.Decoder
+                    .withDictionary(buffer, dict)
             val result = dec.readAll()
 
             assertContentEquals(content, result)
