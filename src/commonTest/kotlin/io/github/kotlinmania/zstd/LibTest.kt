@@ -21,4 +21,10 @@ class LibTest {
         assertEquals(FrameFormat.One, FrameFormat.valueOf("One"))
         assertEquals(FrameFormat.Magicless, FrameFormat.valueOf("Magicless"))
     }
+
+    @Test
+    fun testMapErrorCode() {
+        val ex = mapErrorCode(42)
+        assertTrue(ex.message?.contains("42") == true)
+    }
 }

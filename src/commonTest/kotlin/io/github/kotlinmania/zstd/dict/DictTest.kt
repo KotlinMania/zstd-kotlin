@@ -37,4 +37,23 @@ class DictTest {
         assertEquals(4, trained.size)
         assertContentEquals(byteArrayOf(1, 2, 3, 4), trained)
     }
+
+    @Test
+    fun testDictTraining() {
+        val sample1 = "hello world sample 1".encodeToByteArray()
+        val sample2 = "hello world sample 2".encodeToByteArray()
+        val samples = listOf(sample1, sample2)
+        val dict = fromFiles(samples, 4000)
+
+        for (content in samples) {
+            val enc = io.github.kotlinmania.zstd.stream.write.Encoder.withDictionary(1, dict)
+            enc.write(content)
+            val buffer = enc.finish()
+
+            val dec = io.github.kotlinmania.zstd.stream.read.Decoder.withDictionary(buffer, dict)
+            val result = dec.readAll()
+
+            assertContentEquals(content, result)
+        }
+    }
 }
