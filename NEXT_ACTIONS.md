@@ -5,10 +5,10 @@ Based on AST analysis, here are the concrete next steps.
 ## Summary
 
 - **Files Present:** 11/17 (64.7%)
-- **Function parity:** 71/153 matched (target 110) — 46.4%
+- **Function parity:** 71/153 matched (target 112) — 46.4%
 - **Class/type parity:** 13/20 matched (target 43) — 65.0%
-- **Combined symbol parity:** 84/173 matched (target 153) — 48.6%
-- **Average inline-code cosine:** 0.40 (function body across 8 matched files)
+- **Combined symbol parity:** 84/173 matched (target 155) — 48.6%
+- **Average inline-code cosine:** 0.43 (function body across 8 matched files)
 - **Average documentation cosine:** 0.49 (doc text across 8 matched files)
 - **Cheat-zeroed Files:** 3
 - **Critical Issues:** 11 files with <0.60 function similarity
@@ -112,10 +112,10 @@ Every matched file is listed below with function and type symbol parity.
 ### 8. lib
 
 - **Target:** `zstd.Lib`
-- **Similarity:** 0.24
+- **Similarity:** 0.47
 - **Dependents:** 0
-- **Priority Score:** 20507.6
-- **Functions:** 3/5 matched (target 7)
+- **Priority Score:** 20505.3
+- **Functions:** 3/5 matched (target 9)
 - **Missing functions:** `test_cycle`, `test_cycle_unwrap`
 - **Types:** 0/0 matched (target 26)
 - **Missing types:** _none_
