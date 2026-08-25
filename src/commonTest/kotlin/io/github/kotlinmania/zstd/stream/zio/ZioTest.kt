@@ -70,4 +70,31 @@ class ZioTest {
         val output = writer.finish()
         assertContentEquals(input, output)
     }
+
+    @Test
+    fun testNoop() {
+        testReaderNoop()
+        testWriterNoop()
+    }
+
+    @Test
+    fun testCompress() {
+        testReaderCompress()
+        testWriterCompress()
+    }
+
+    @Test
+    fun testCompressWithCapacity() {
+        testWriterCompressWithCapacity()
+    }
+
+    @Test
+    fun testDecompress() {
+        testWriterDecompress()
+    }
+
+    @Test
+    fun testDecompressWithCapacity() {
+        testWriterDecompressWithCapacity()
+    }
 }

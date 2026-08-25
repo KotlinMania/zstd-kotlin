@@ -11,7 +11,11 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class BulkTest {
-    private val sampleText = "Hello, Zstandard Kotlin Multiplatform world! This is a test."
+    private val sampleText = TEXT
+
+    companion object {
+        private const val TEXT: String = "Hello, Zstandard Kotlin Multiplatform world! This is a test."
+    }
 
     @Test
     fun testDirectCompressAndDecompress() {
@@ -19,6 +23,11 @@ class BulkTest {
         val compressed = compress(originalBytes, 1)
         val decompressed = decompress(compressed, originalBytes.size)
         assertContentEquals(originalBytes, decompressed)
+    }
+
+    @Test
+    fun testDirect() {
+        testDirectCompressAndDecompress()
     }
 
     @Test
