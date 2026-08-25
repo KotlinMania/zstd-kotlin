@@ -6,6 +6,16 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class LibTest {
+    fun testCycle(data: ByteArray, f: (ByteArray) -> ByteArray, g: (ByteArray) -> ByteArray) {
+        val mid = f(data)
+        val end = g(mid)
+        kotlin.test.assertContentEquals(data, end)
+    }
+
+    fun testCycleUnwrap(data: ByteArray, f: (ByteArray) -> ByteArray, g: (ByteArray) -> ByteArray) {
+        testCycle(data, f, g)
+    }
+
     @Test
     fun defaultCompressionLevelInRange() {
         val range = compressionLevelRange()
