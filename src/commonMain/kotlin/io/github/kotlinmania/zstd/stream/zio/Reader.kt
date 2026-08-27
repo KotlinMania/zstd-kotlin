@@ -23,6 +23,16 @@ public class Reader(
 
     public fun operationMut(): Operation = operation
 
+    public fun reader(): ByteArray = source
+
+    public fun readerMut(): ByteArray = source
+
+    public fun intoInner(): ByteArray = source
+
+    public fun offset(): Int = offset
+
+    public fun buffer(): ByteArray = source
+
     public fun read(destination: ByteArray): Int {
         if (offset >= source.size) {
             return 0
