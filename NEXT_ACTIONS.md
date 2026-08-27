@@ -4,13 +4,13 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 11/17 (64.7%)
-- **Function parity:** 71/153 matched (target 112) — 46.4%
-- **Class/type parity:** 13/20 matched (target 43) — 65.0%
-- **Combined symbol parity:** 84/173 matched (target 155) — 48.6%
-- **Average inline-code cosine:** 0.43 (function body across 8 matched files)
-- **Average documentation cosine:** 0.49 (doc text across 8 matched files)
-- **Cheat-zeroed Files:** 3
+- **Files Present:** 11/24 (45.8%)
+- **Function parity:** 71/166 matched (target 112) — 42.8%
+- **Class/type parity:** 13/23 matched (target 43) — 56.5%
+- **Combined symbol parity:** 84/189 matched (target 155) — 44.4%
+- **Average inline-code cosine:** 0.42 (function body across 7 matched files)
+- **Average documentation cosine:** 0.52 (doc text across 7 matched files)
+- **Cheat-zeroed Files:** 4
 - **Critical Issues:** 11 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
@@ -109,19 +109,19 @@ Every matched file is listed below with function and type symbol parity.
 - **Tests:** 0/1 matched
 - **Lint issues:** 1
 
-### 8. lib
+### 8. zstd.lib
 
-- **Target:** `zstd.Lib`
-- **Similarity:** 0.47
+- **Target:** `zstd.Lib [STUB]`
+- **Similarity:** 0.00
 - **Dependents:** 0
-- **Priority Score:** 20505.3
+- **Priority Score:** 20510.0
 - **Functions:** 3/5 matched (target 9)
 - **Missing functions:** `test_cycle`, `test_cycle_unwrap`
 - **Types:** 0/0 matched (target 26)
 - **Missing types:** _none_
 - **Tests:** 1/3 matched
 
-### 9. dict
+### 9. zstd.dict
 
 - **Target:** `dict.Dict`
 - **Similarity:** 0.52
@@ -163,18 +163,4 @@ For each file to be considered "complete":
 - All tests ported
 - Documentation ported
 - port-lint header present
-
-## Reexport / Wiring Modules
-
-These files match `reexport_modules` patterns in `.ast_distance_config.json`. They are filtered out of
-normal priority and missing-file ladders because they are wiring
-modules, not direct logic ports. Consult them for call-site routing;
-do not treat them as the next implementation target by default.
-
-### Missing
-
-| Source | Expected target | Deps | Source path | Expected path |
-|--------|-----------------|------|-------------|---------------|
-| `stream.mod` | `stream.Mod` | 0 | `stream/mod.rs` | `stream/Mod.kt` |
-| `zio.mod` | `stream.zio.Mod` | 0 | `stream/zio/mod.rs` | `stream/zio/Mod.kt` |
 
