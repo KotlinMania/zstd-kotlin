@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/stream/read/mod.rs
+// port-lint: source stream/read/mod.rs
 package io.github.kotlinmania.zstd.stream.read
 
 import io.github.kotlinmania.zstd.DParameter

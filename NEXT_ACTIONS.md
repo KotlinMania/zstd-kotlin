@@ -4,13 +4,13 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 11/24 (45.8%)
-- **Function parity:** 71/166 matched (target 112) — 42.8%
-- **Class/type parity:** 13/23 matched (target 43) — 56.5%
-- **Combined symbol parity:** 84/189 matched (target 155) — 44.4%
-- **Average inline-code cosine:** 0.42 (function body across 7 matched files)
-- **Average documentation cosine:** 0.52 (doc text across 7 matched files)
-- **Cheat-zeroed Files:** 4
+- **Files Present:** 11/17 (64.7%)
+- **Function parity:** 71/153 matched (target 112) — 46.4%
+- **Class/type parity:** 13/20 matched (target 43) — 65.0%
+- **Combined symbol parity:** 84/173 matched (target 155) — 48.6%
+- **Average inline-code cosine:** 0.43 (function body across 8 matched files)
+- **Average documentation cosine:** 0.49 (doc text across 8 matched files)
+- **Cheat-zeroed Files:** 3
 - **Critical Issues:** 11 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
@@ -109,19 +109,19 @@ Every matched file is listed below with function and type symbol parity.
 - **Tests:** 0/1 matched
 - **Lint issues:** 1
 
-### 8. zstd.lib
+### 8. lib
 
-- **Target:** `zstd.Lib [STUB]`
-- **Similarity:** 0.00
+- **Target:** `zstd.Lib`
+- **Similarity:** 0.47
 - **Dependents:** 0
-- **Priority Score:** 20510.0
+- **Priority Score:** 20505.3
 - **Functions:** 3/5 matched (target 9)
 - **Missing functions:** `test_cycle`, `test_cycle_unwrap`
 - **Types:** 0/0 matched (target 26)
 - **Missing types:** _none_
 - **Tests:** 1/3 matched
 
-### 9. zstd.dict
+### 9. dict
 
 - **Target:** `dict.Dict`
 - **Similarity:** 0.52

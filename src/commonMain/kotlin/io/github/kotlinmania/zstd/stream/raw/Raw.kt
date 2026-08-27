@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/stream/raw.rs
+// port-lint: source stream/raw.rs
 package io.github.kotlinmania.zstd.stream.raw
 
 import io.github.kotlinmania.zstd.CParameter
