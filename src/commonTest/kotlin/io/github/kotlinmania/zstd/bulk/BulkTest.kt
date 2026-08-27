@@ -1,4 +1,4 @@
-// port-lint: tests bulk/tests.rs
+// port-lint: tests zstd/src/bulk/tests.rs
 package io.github.kotlinmania.zstd.bulk
 
 import io.github.kotlinmania.zstd.decodeAll
