@@ -18,6 +18,22 @@ public class Writer(
 
     public fun operationMut(): Operation = operation
 
+    public fun writer(): ByteArray = buffer.toByteArray()
+
+    public fun writerMut(): ByteArray = buffer.toByteArray()
+
+    public fun intoInner(): Pair<ByteArray, Operation> = Pair(buffer.toByteArray(), operation)
+
+    public fun offset(): Int = buffer.size
+
+    public fun buffer(): ByteArray = buffer.toByteArray()
+
+    public fun flush() {}
+
+    private fun writeFromOffset() {}
+
+    public fun withBuffer(capacity: Int): Writer = Writer(operation, capacity)
+
     public fun write(data: ByteArray) {
         val inBuf = InBuffer.around(data)
         val chunk = ByteArray(bufferSize)
@@ -50,6 +66,9 @@ public class Writer(
         public fun new(operation: Operation): Writer = Writer(operation)
 
         public fun newWithCapacity(operation: Operation, capacity: Int): Writer =
+            Writer(operation, capacity)
+
+        public fun withOutputBuffer(operation: Operation, capacity: Int): Writer =
             Writer(operation, capacity)
     }
 }

@@ -181,6 +181,8 @@ public class Decoder(
             Decoder(dictionary.dictionary.copyOf())
 
         public fun withRefPrefix(refPrefix: ByteArray): Decoder = Decoder(refPrefix.copyOf())
+
+        public fun withContext(context: Any? = null): Decoder = Decoder()
     }
 }
 
@@ -251,5 +253,7 @@ public class Encoder(
 
         public fun withRefPrefix(level: Int, refPrefix: ByteArray): Encoder =
             Encoder(level, refPrefix.copyOf())
+
+        public fun withContext(context: Any? = null): Encoder = Encoder()
     }
 }
