@@ -4,14 +4,14 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 11/17 (64.7%)
-- **Function parity:** 71/153 matched (target 112) — 46.4%
-- **Class/type parity:** 13/20 matched (target 43) — 65.0%
-- **Combined symbol parity:** 84/173 matched (target 155) — 48.6%
-- **Average inline-code cosine:** 0.43 (function body across 8 matched files)
+- **Files Present:** 13/17 (76.5%)
+- **Function parity:** 104/153 matched (target 183) — 68.0%
+- **Class/type parity:** 17/20 matched (target 49) — 85.0%
+- **Combined symbol parity:** 121/173 matched (target 232) — 69.9%
+- **Average inline-code cosine:** 0.46 (function body across 8 matched files)
 - **Average documentation cosine:** 0.49 (doc text across 8 matched files)
-- **Cheat-zeroed Files:** 3
-- **Critical Issues:** 11 files with <0.60 function similarity
+- **Cheat-zeroed Files:** 5
+- **Critical Issues:** 13 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
 
@@ -30,11 +30,11 @@ Every matched file is listed below with function and type symbol parity.
 ### 1. zio.writer
 
 - **Target:** `zio.Writer`
-- **Similarity:** 0.16
+- **Similarity:** 0.31
 - **Dependents:** 1
-- **Priority Score:** 1152108.4
-- **Functions:** 5/20 matched (target 5)
-- **Missing functions:** `with_output_buffer`, `with_buffer`, `write_from_offset`, `into_inner`, `writer`, `writer_mut`, `operation`, `offset`, `buffer`, `flush`, `test_noop`, `test_compress`, `test_compress_with_capacity`, `test_decompress`, `test_decompress_with_capacity`
+- **Priority Score:** 1082106.9
+- **Functions:** 12/20 matched (target 14)
+- **Missing functions:** `operation`, `offset`, `buffer`, `test_noop`, `test_compress`, `test_compress_with_capacity`, `test_decompress`, `test_decompress_with_capacity`
 - **Types:** 1/1 matched
 - **Missing types:** _none_
 - **Tests:** 0/7 matched
@@ -42,11 +42,11 @@ Every matched file is listed below with function and type symbol parity.
 ### 2. zio.reader
 
 - **Target:** `zio.Reader`
-- **Similarity:** 0.33
+- **Similarity:** 0.40
 - **Dependents:** 1
-- **Priority Score:** 1071306.8
-- **Functions:** 5/11 matched (target 6)
-- **Missing functions:** `reader_mut`, `reader`, `into_inner`, `fill_buf`, `test_noop`, `test_compress`
+- **Priority Score:** 1041306.0
+- **Functions:** 8/11 matched
+- **Missing functions:** `fill_buf`, `test_noop`, `test_compress`
 - **Types:** 1/2 matched (target 1)
 - **Missing types:** `State`
 - **Tests:** 0/2 matched
@@ -79,35 +79,35 @@ Every matched file is listed below with function and type symbol parity.
 - **Target:** `write.Encoder [STUB]`
 - **Similarity:** 0.00
 - **Dependents:** 0
-- **Priority Score:** 212810.0
-- **Functions:** 6/24 matched (target 7)
-- **Missing functions:** `get_ref`, `get_mut`, `drop`, `flush`, `with_writer`, `with_encoder`, `with_context`, `auto_finish`, `on_finish`, `try_finish`, `do_finish`, `recommended_input_size`, `with_decoder`, `into_inner`, `auto_flush`, `on_flush`, `_assert_traits`, `_assert_send`
-- **Types:** 1/4 matched (target 1)
-- **Missing types:** `Decoder`, `AutoFinishEncoder`, `AutoFlushDecoder`
+- **Priority Score:** 32810.0
+- **Functions:** 21/24 matched (target 40)
+- **Missing functions:** `drop`, `_assert_traits`, `_assert_send`
+- **Types:** 4/4 matched
+- **Missing types:** _none_
 
-### 6. read.mod
-
-- **Target:** `read.Decoder [STUB]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 101710.0
-- **Functions:** 6/15 matched (target 8)
-- **Missing functions:** `with_buffer`, `with_context`, `recommended_output_size`, `get_ref`, `get_mut`, `finish`, `flush`, `_assert_traits`, `_assert_send`
-- **Types:** 1/2 matched (target 1)
-- **Missing types:** `Encoder`
-
-### 7. stream.raw
+### 6. stream.raw
 
 - **Target:** `raw.Raw`
-- **Similarity:** 0.48
+- **Similarity:** 0.53
 - **Dependents:** 0
-- **Priority Score:** 42005.2
-- **Functions:** 11/13 matched (target 30)
-- **Missing functions:** `with_context`, `test_cycle`
+- **Priority Score:** 32004.7
+- **Functions:** 12/13 matched (target 32)
+- **Missing functions:** `test_cycle`
 - **Types:** 5/7 matched (target 8)
 - **Missing types:** `MaybeOwnedCCtx`, `MaybeOwnedDCtx`
 - **Tests:** 0/1 matched
 - **Lint issues:** 1
+
+### 7. read.mod
+
+- **Target:** `read.Decoder [STUB]`
+- **Similarity:** 0.00
+- **Dependents:** 0
+- **Priority Score:** 21710.0
+- **Functions:** 13/15 matched (target 26)
+- **Missing functions:** `_assert_traits`, `_assert_send`
+- **Types:** 2/2 matched
+- **Missing types:** _none_
 
 ### 8. lib
 
@@ -153,6 +153,28 @@ Every matched file is listed below with function and type symbol parity.
 - **Functions:** 4/4 matched
 - **Missing functions:** _none_
 - **Types:** 0/0 matched
+- **Missing types:** _none_
+
+### 12. stream.mod
+
+- **Target:** `stream.Mod [STUB]`
+- **Similarity:** 0.00
+- **Dependents:** 0
+- **Priority Score:** 10.0
+- **Functions:** 0/0 matched (target 4)
+- **Missing functions:** _none_
+- **Types:** 0/0 matched (target 1)
+- **Missing types:** _none_
+
+### 13. zio.mod
+
+- **Target:** `zio.Mod [STUB]`
+- **Similarity:** 0.00
+- **Dependents:** 0
+- **Priority Score:** 10.0
+- **Functions:** 0/0 matched
+- **Missing functions:** _none_
+- **Types:** 0/0 matched (target 1)
 - **Missing types:** _none_
 
 ## Success Criteria
