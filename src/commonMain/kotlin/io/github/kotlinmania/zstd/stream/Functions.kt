@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/stream/functions.rs
+// port-lint: source stream/functions.rs
 package io.github.kotlinmania.zstd.stream
 
 import io.github.kotlinmania.zstd.DEFAULT_COMPRESSION_LEVEL
