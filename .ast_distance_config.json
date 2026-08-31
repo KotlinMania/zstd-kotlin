@@ -17,16 +17,31 @@
   },
   "reexport_modules": [
     "bulk/mod",
+    "bulk/tests",
+    "bulk/tests.rs",
     "stream/mod",
+    "stream/tests",
+    "stream/tests.rs",
     "zio/mod",
     "stream/write/mod",
+    "stream/write/tests",
+    "stream/write/tests.rs",
     "stream/read/mod",
+    "stream/read/tests",
+    "stream/read/tests.rs",
     "bulk.mod",
+    "bulk.tests",
     "stream.mod",
+    "stream.tests",
     "zio.mod",
     "stream.write.mod",
+    "stream.write.tests",
     "stream.read.mod",
+    "stream.read.tests",
     "write.mod",
-    "read.mod"
+    "write.tests",
+    "read.mod",
+    "read.tests",
+    "tests.rs"
   ]
 }

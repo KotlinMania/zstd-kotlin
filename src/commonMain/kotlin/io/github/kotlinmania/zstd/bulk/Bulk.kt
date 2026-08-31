@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/bulk/mod.rs
+// port-lint: source bulk/mod.rs
 package io.github.kotlinmania.zstd.bulk
 
 import io.github.kotlinmania.zstd.DEFAULT_COMPRESSION_LEVEL
@@ -8,23 +8,27 @@ import io.github.kotlinmania.zstd.DEFAULT_COMPRESSION_LEVEL
  *
  * Returns the number of bytes written, or throws an error if the destination buffer was too small.
  *
- * A level of `0` uses zstd's default (currently `3`).
+ * A level of `0` uses Zstandard default (currently `3`).
  */
 public fun compressToBuffer(
     source: ByteArray,
     destination: ByteArray,
     level: Int = DEFAULT_COMPRESSION_LEVEL,
-): Int = Compressor.new(level).compressToBuffer(source, destination)
+): Int {
+    return Compressor.new(level).compressToBuffer(source, destination)
+}
 
 /**
  * Compresses a block of data and returns the compressed result.
  *
- * A level of `0` uses zstd's default (currently `3`).
+ * A level of `0` uses Zstandard default (currently `3`).
  */
 public fun compress(
     data: ByteArray,
     level: Int = DEFAULT_COMPRESSION_LEVEL,
-): ByteArray = Compressor.new(level).compress(data)
+): ByteArray {
+    return Compressor.new(level).compress(data)
+}
 
 /**
  * Decompress a single block of data to the given destination buffer.
@@ -34,7 +38,9 @@ public fun compress(
 public fun decompressToBuffer(
     source: ByteArray,
     destination: ByteArray,
-): Int = Decompressor.new().decompressToBuffer(source, destination)
+): Int {
+    return Decompressor.new().decompressToBuffer(source, destination)
+}
 
 /**
  * Decompresses a block of data and returns the decompressed result.
@@ -44,4 +50,7 @@ public fun decompressToBuffer(
 public fun decompress(
     data: ByteArray,
     capacity: Int,
-): ByteArray = Decompressor.new().decompress(data, capacity)
+): ByteArray {
+    return Decompressor.new().decompress(data, capacity)
+}
+
