@@ -1,4 +1,4 @@
-// port-lint: source dict.rs
+// port-lint: source zstd/src/dict.rs
 package io.github.kotlinmania.zstd.dict
 
 /**

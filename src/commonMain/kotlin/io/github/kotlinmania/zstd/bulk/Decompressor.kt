@@ -1,4 +1,4 @@
-// port-lint: source bulk/decompressor.rs
+// port-lint: source zstd/src/bulk/decompressor.rs
 package io.github.kotlinmania.zstd.bulk
 
 import io.github.kotlinmania.zstd.DParameter

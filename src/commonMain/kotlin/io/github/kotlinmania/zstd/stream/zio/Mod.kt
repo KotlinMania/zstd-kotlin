@@ -1,4 +1,4 @@
-// port-lint: source stream/zio/mod.rs
+// port-lint: source zstd/src/stream/zio/mod.rs
 package io.github.kotlinmania.zstd.stream.zio
 
 /**
