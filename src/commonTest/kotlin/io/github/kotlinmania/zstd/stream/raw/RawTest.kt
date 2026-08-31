@@ -1,4 +1,4 @@
-// port-lint: tests stream/raw.rs
+// port-lint: tests zstd/src/stream/raw.rs
 package io.github.kotlinmania.zstd.stream.raw
 
 import kotlin.test.Test
