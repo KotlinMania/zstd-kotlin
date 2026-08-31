@@ -1,4 +1,6 @@
-// port-lint: tests stream/tests.rs, stream/read/tests.rs, stream/write/tests.rs
+// port-lint: tests zstd/src/stream/tests.rs
+// port-lint: tests zstd/src/stream/read/tests.rs
+// port-lint: tests zstd/src/stream/write/tests.rs
 package io.github.kotlinmania.zstd.stream
 
 import io.github.kotlinmania.zstd.stream.read.Decoder
