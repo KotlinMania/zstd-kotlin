@@ -1,4 +1,4 @@
-// port-lint: tests lib.rs
+// port-lint: tests zstd/src/lib.rs
 package io.github.kotlinmania.zstd
 
 import kotlin.test.Test

@@ -1,4 +1,4 @@
-// port-lint: tests stream/tests.rs
+// port-lint: tests zstd/src/stream/tests.rs
 // port-lint: tests stream/read/tests.rs
 // port-lint: tests stream/write/tests.rs
 package io.github.kotlinmania.zstd.stream
