@@ -1,5 +1,5 @@
-// port-lint: tests zstd/src/stream/zio/reader.rs
-// port-lint: tests zstd/src/stream/zio/writer.rs
+// port-lint: tests stream/zio/reader.rs
+// port-lint: tests stream/zio/writer.rs
 package io.github.kotlinmania.zstd.stream.zio
 
 import io.github.kotlinmania.zstd.decodeAll
