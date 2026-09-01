@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/stream/write/mod.rs
+// port-lint: source stream/write/mod.rs
 package io.github.kotlinmania.zstd.stream.write
 
 import io.github.kotlinmania.zstd.CParameter
