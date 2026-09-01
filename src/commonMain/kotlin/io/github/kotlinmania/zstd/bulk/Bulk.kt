@@ -14,9 +14,7 @@ public fun compressToBuffer(
     source: ByteArray,
     destination: ByteArray,
     level: Int = DEFAULT_COMPRESSION_LEVEL,
-): Int {
-    return Compressor.new(level).compressToBuffer(source, destination)
-}
+): Int = Compressor.new(level).compressToBuffer(source, destination)
 
 /**
  * Compresses a block of data and returns the compressed result.
@@ -26,9 +24,7 @@ public fun compressToBuffer(
 public fun compress(
     data: ByteArray,
     level: Int = DEFAULT_COMPRESSION_LEVEL,
-): ByteArray {
-    return Compressor.new(level).compress(data)
-}
+): ByteArray = Compressor.new(level).compress(data)
 
 /**
  * Decompress a single block of data to the given destination buffer.
@@ -38,9 +34,7 @@ public fun compress(
 public fun decompressToBuffer(
     source: ByteArray,
     destination: ByteArray,
-): Int {
-    return Decompressor.new().decompressToBuffer(source, destination)
-}
+): Int = Decompressor.new().decompressToBuffer(source, destination)
 
 /**
  * Decompresses a block of data and returns the decompressed result.
@@ -50,7 +44,4 @@ public fun decompressToBuffer(
 public fun decompress(
     data: ByteArray,
     capacity: Int,
-): ByteArray {
-    return Decompressor.new().decompress(data, capacity)
-}
-
+): ByteArray = Decompressor.new().decompress(data, capacity)
