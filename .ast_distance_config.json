@@ -42,6 +42,14 @@
     "write.tests",
     "read.mod",
     "read.tests",
-    "tests.rs"
+    "tests.rs",
+    "zstd/src/bulk/mod.rs",
+    "zstd/src/stream/mod.rs",
+    "zstd/src/stream/zio/mod.rs",
+    "zstd/src/stream/write/mod.rs",
+    "zstd/src/stream/read/mod.rs",
+    "zstd/src/lib.rs",
+    "lib.rs",
+    "lib"
   ]
 }
