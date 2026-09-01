@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/bulk/mod.rs
+// port-lint: source bulk/mod.rs
 package io.github.kotlinmania.zstd.bulk
 
 import io.github.kotlinmania.zstd.DEFAULT_COMPRESSION_LEVEL

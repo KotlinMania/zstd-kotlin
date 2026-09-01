@@ -1,4 +1,4 @@
-// port-lint: source zstd/src/stream/zio/reader.rs
+// port-lint: source stream/zio/reader.rs
 package io.github.kotlinmania.zstd.stream.zio
 
 import io.github.kotlinmania.zstd.stream.raw.InBuffer

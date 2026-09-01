@@ -4,13 +4,13 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 13/24 (54.2%)
-- **Function parity:** 103/136 matched (target 186) — 75.7%
-- **Class/type parity:** 17/23 matched (target 24) — 73.9%
-- **Combined symbol parity:** 120/159 matched (target 210) — 75.5%
-- **Average inline-code cosine:** 0.47 (function body across 7 matched files)
-- **Average documentation cosine:** 0.52 (doc text across 7 matched files)
-- **Cheat-zeroed Files:** 5
+- **Files Present:** 13/17 (76.5%)
+- **Function parity:** 65/80 matched (target 112) — 81.2%
+- **Class/type parity:** 11/14 matched (target 17) — 78.6%
+- **Combined symbol parity:** 76/94 matched (target 129) — 80.9%
+- **Average inline-code cosine:** 0.47 (function body across 8 matched files)
+- **Average documentation cosine:** 0.49 (doc text across 8 matched files)
+- **Cheat-zeroed Files:** 1
 - **Critical Issues:** 13 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
@@ -74,18 +74,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Missing types:** _none_
 - **Lint issues:** 1
 
-### 5. write.mod
-
-- **Target:** `write.Encoder [STUB]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 32810.0
-- **Functions:** 21/24 matched (target 40)
-- **Missing functions:** `drop`, `_assert_traits`, `_assert_send`
-- **Types:** 4/4 matched
-- **Missing types:** _none_
-
-### 6. stream.raw
+### 5. stream.raw
 
 - **Target:** `raw.Raw`
 - **Similarity:** 0.53
@@ -98,18 +87,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Tests:** 0/1 matched
 - **Lint issues:** 1
 
-### 7. read.mod
-
-- **Target:** `read.Decoder [STUB]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 21710.0
-- **Functions:** 13/15 matched (target 26)
-- **Missing functions:** `_assert_traits`, `_assert_send`
-- **Types:** 2/2 matched
-- **Missing types:** _none_
-
-### 8. zstd.dict
+### 6. dict
 
 - **Target:** `dict.Dict`
 - **Similarity:** 0.52
@@ -121,18 +99,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Missing types:** _none_
 - **Tests:** 1/1 matched
 
-### 9. bulk.mod
-
-- **Target:** `bulk.Bulk [STUB]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 410.0
-- **Functions:** 4/4 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched
-- **Missing types:** _none_
-
-### 10. stream.functions
+### 7. stream.functions
 
 - **Target:** `stream.Functions`
 - **Similarity:** 0.50
@@ -143,18 +110,7 @@ Every matched file is listed below with function and type symbol parity.
 - **Types:** 0/0 matched
 - **Missing types:** _none_
 
-### 11. stream.mod
-
-- **Target:** `stream.Mod [STUB]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 10.0
-- **Functions:** 0/0 matched (target 4)
-- **Missing functions:** _none_
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-
-### 12. zio.mod
+### 8. zio.mod
 
 - **Target:** `zio.Mod [STUB]`
 - **Similarity:** 0.00
@@ -185,14 +141,18 @@ do not treat them as the next implementation target by default.
 
 | Source | Target | Path |
 |--------|--------|------|
-| `zstd.lib` | `zstd.Lib` | `zstd/src/lib` |
+| `write.mod` | `write.Encoder` | `stream/write/mod` |
+| `read.mod` | `read.Decoder` | `stream/read/mod` |
+| `lib` | `zstd.Lib` | `lib` |
+| `bulk.mod` | `bulk.Bulk` | `bulk/mod` |
+| `stream.mod` | `stream.Mod` | `stream/mod` |
 
 ### Missing
 
 | Source | Expected target | Deps | Source path | Expected path |
 |--------|-----------------|------|-------------|---------------|
-| `bulk.tests` | `zstd.src.bulk.Tests` | 0 | `zstd/src/bulk/tests.rs` | `zstd/src/bulk/Tests.kt` |
-| `read.tests` | `zstd.src.stream.read.Tests` | 0 | `zstd/src/stream/read/tests.rs` | `zstd/src/stream/read/Tests.kt` |
-| `stream.tests` | `zstd.src.stream.Tests` | 0 | `zstd/src/stream/tests.rs` | `zstd/src/stream/Tests.kt` |
-| `write.tests` | `zstd.src.stream.write.Tests` | 0 | `zstd/src/stream/write/tests.rs` | `zstd/src/stream/write/Tests.kt` |
+| `bulk.tests` | `bulk.Tests` | 0 | `bulk/tests.rs` | `bulk/Tests.kt` |
+| `read.tests` | `stream.read.Tests` | 0 | `stream/read/tests.rs` | `stream/read/Tests.kt` |
+| `stream.tests` | `stream.Tests` | 0 | `stream/tests.rs` | `stream/Tests.kt` |
+| `write.tests` | `stream.write.Tests` | 0 | `stream/write/tests.rs` | `stream/write/Tests.kt` |
 

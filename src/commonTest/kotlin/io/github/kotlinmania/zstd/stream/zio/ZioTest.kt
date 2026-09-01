@@ -1,4 +1,4 @@
-// port-lint: tests zstd/src/stream/zio/reader.rs
+// port-lint: tests stream/zio/reader.rs
 // port-lint: tests stream/zio/writer.rs
 package io.github.kotlinmania.zstd.stream.zio
 
