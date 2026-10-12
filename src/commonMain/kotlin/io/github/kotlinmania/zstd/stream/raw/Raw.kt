@@ -257,3 +257,29 @@ public class Encoder(
         public fun withContext(context: Any? = null): Encoder = Encoder()
     }
 }
+
+/**
+ * Context container that may be either owned or borrowed.
+ */
+public sealed class MaybeOwnedCCtx {
+    public data class Owned(
+        public val context: Any? = null,
+    ) : MaybeOwnedCCtx()
+
+    public data class Borrowed(
+        public val context: Any? = null,
+    ) : MaybeOwnedCCtx()
+}
+
+/**
+ * Context container that may be either owned or borrowed.
+ */
+public sealed class MaybeOwnedDCtx {
+    public data class Owned(
+        public val context: Any? = null,
+    ) : MaybeOwnedDCtx()
+
+    public data class Borrowed(
+        public val context: Any? = null,
+    ) : MaybeOwnedDCtx()
+}

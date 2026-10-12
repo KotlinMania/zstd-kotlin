@@ -89,3 +89,10 @@ public class Decompressor(
             }
     }
 }
+
+private fun assertTraits() {
+    fun <T> assertSend(value: T) {
+        // Assert Send compile-time trait parity
+    }
+    assertSend(Decompressor.new())
+}
