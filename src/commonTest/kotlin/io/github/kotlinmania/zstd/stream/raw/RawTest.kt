@@ -27,4 +27,39 @@ class RawTest {
         assertEquals(0, outBuf.pos)
         assertEquals(10, outBuf.capacity())
     }
+
+    @Test
+    fun testCycle() {
+        val encoder = Encoder.new(1)
+        val decoder = Decoder.new()
+
+        val inputData = "AbcdefAbcdefabcdef".encodeToByteArray()
+        val input = InBuffer.around(inputData)
+
+        val outputArray = ByteArray(128)
+        val output = OutBuffer.around(outputArray)
+
+        while (true) {
+            encoder.run(input, output)
+            if (input.pos == input.src.size) {
+                break
+            }
+        }
+        encoder.finish(output, true)
+
+        val encodedSlice = output.asSlice()
+
+        val decodeInput = InBuffer.around(encodedSlice)
+        val decodeOutputArray = ByteArray(128)
+        val decodeOutput = OutBuffer.around(decodeOutputArray)
+
+        while (true) {
+            decoder.run(decodeInput, decodeOutput)
+            if (decodeInput.pos == decodeInput.src.size) {
+                break
+            }
+        }
+
+        assertEquals(inputData.toList(), decodeOutput.asSlice().toList())
+    }
 }

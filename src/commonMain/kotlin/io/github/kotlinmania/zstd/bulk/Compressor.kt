@@ -80,6 +80,8 @@ public class Compressor(
         return dest.copyOf(written)
     }
 
+    public fun contextMut(): Any? = null
+
     public companion object {
         public fun new(level: Int = DEFAULT_COMPRESSION_LEVEL): Compressor = Compressor(level)
 
@@ -95,4 +97,11 @@ public class Compressor(
             return c
         }
     }
+}
+
+private fun assertTraits() {
+    fun <T> assertSend(value: T) {
+        // Assert Send compile-time trait parity
+    }
+    assertSend(Compressor.new(0))
 }
