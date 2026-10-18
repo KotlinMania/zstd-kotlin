@@ -2,8 +2,8 @@
 // port-lint: tests stream/zio/writer.rs
 package io.github.kotlinmania.zstd.stream.zio
 
-import io.github.kotlinmania.zstd.decodeAll
-import io.github.kotlinmania.zstd.encodeAll
+import io.github.kotlinmania.zstd.stream.decodeAll
+import io.github.kotlinmania.zstd.stream.encodeAll
 import io.github.kotlinmania.zstd.stream.raw.Decoder
 import io.github.kotlinmania.zstd.stream.raw.Encoder
 import io.github.kotlinmania.zstd.stream.raw.NoOp

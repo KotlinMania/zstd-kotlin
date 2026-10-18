@@ -1,25 +1,4 @@
-// port-lint: source lib.rs
 package io.github.kotlinmania.zstd
-
-/**
- * Default compression level.
- */
-public const val DEFAULT_COMPRESSION_LEVEL: Int = 3
-
-/**
- * Minimum supported compression level.
- */
-public const val MIN_COMPRESSION_LEVEL: Int = 1
-
-/**
- * Maximum supported compression level.
- */
-public const val MAX_COMPRESSION_LEVEL: Int = 22
-
-/**
- * The accepted range of compression levels.
- */
-public fun compressionLevelRange(): IntRange = MIN_COMPRESSION_LEVEL..MAX_COMPRESSION_LEVEL
 
 /**
  * Format of a Zstandard frame.
@@ -137,22 +116,3 @@ public sealed class DParameter {
         public val format: FrameFormat,
     ) : DParameter()
 }
-
-/**
- * Returns an exception representing the specified error code.
- */
-public fun mapErrorCode(code: Int): Exception = IllegalArgumentException("Zstandard error code $code")
-
-/**
- * Decompress from the given source.
- */
-public fun decodeAll(source: ByteArray): ByteArray =
-    io.github.kotlinmania.zstd.stream
-        .decodeAll(source)
-
-/**
- * Compress all data from the given source.
- */
-public fun encodeAll(source: ByteArray, level: Int = DEFAULT_COMPRESSION_LEVEL): ByteArray =
-    io.github.kotlinmania.zstd.stream
-        .encodeAll(source, level)
