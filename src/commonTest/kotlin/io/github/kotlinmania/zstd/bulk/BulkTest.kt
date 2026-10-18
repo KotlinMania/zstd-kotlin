@@ -1,10 +1,10 @@
 // port-lint: tests bulk/tests.rs
 package io.github.kotlinmania.zstd.bulk
 
-import io.github.kotlinmania.zstd.decodeAll
 import io.github.kotlinmania.zstd.dict.DecoderDictionary
 import io.github.kotlinmania.zstd.dict.EncoderDictionary
-import io.github.kotlinmania.zstd.encodeAll
+import io.github.kotlinmania.zstd.stream.decodeAll
+import io.github.kotlinmania.zstd.stream.encodeAll
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals

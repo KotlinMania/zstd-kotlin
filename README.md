@@ -123,7 +123,7 @@ This implementation is largely inspired by bozaro's [lz4-rs].
 
 ```kotlin
 dependencies {
-    implementation("io.github.kotlinmania:zstd-kotlin:0.1.0")
+    implementation("io.github.kotlinmania:zstd-kotlin:0.2.0")
 }
 ```
 
