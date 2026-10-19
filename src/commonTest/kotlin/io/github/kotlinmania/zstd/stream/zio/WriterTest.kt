@@ -1,4 +1,3 @@
-// port-lint: tests stream/zio/reader.rs
 // port-lint: tests stream/zio/writer.rs
 package io.github.kotlinmania.zstd.stream.zio
 
@@ -10,26 +9,11 @@ import io.github.kotlinmania.zstd.stream.raw.NoOp
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
-class ZioTest {
+class WriterTest {
     private val input = "AbcdefghAbcdefgh.".encodeToByteArray()
 
     @Test
-    fun testReaderNoop() {
-        val reader = Reader.new(input, NoOp())
-        val output = reader.readAll()
-        assertContentEquals(input, output)
-    }
-
-    @Test
-    fun testReaderCompress() {
-        val reader = Reader.new(input, Encoder.new(1))
-        val output = reader.readAll()
-        val decoded = decodeAll(output)
-        assertContentEquals(input, decoded)
-    }
-
-    @Test
-    fun testWriterNoop() {
+    fun testNoop() {
         val writer = Writer.new(NoOp())
         writer.write(input)
         val output = writer.finish()
@@ -37,7 +21,7 @@ class ZioTest {
     }
 
     @Test
-    fun testWriterCompress() {
+    fun testCompress() {
         val writer = Writer.new(Encoder.new(1))
         writer.write(input)
         val output = writer.finish()
@@ -46,7 +30,7 @@ class ZioTest {
     }
 
     @Test
-    fun testWriterCompressWithCapacity() {
+    fun testCompressWithCapacity() {
         val writer = Writer.newWithCapacity(Encoder.new(1), 64)
         writer.write(input)
         val output = writer.finish()
@@ -55,7 +39,7 @@ class ZioTest {
     }
 
     @Test
-    fun testWriterDecompress() {
+    fun testDecompress() {
         val compressed = encodeAll(input, 1)
         val writer = Writer.new(Decoder.new())
         writer.write(compressed)
@@ -64,38 +48,11 @@ class ZioTest {
     }
 
     @Test
-    fun testWriterDecompressWithCapacity() {
+    fun testDecompressWithCapacity() {
         val compressed = encodeAll(input, 1)
         val writer = Writer.newWithCapacity(Decoder.new(), 64)
         writer.write(compressed)
         val output = writer.finish()
         assertContentEquals(input, output)
-    }
-
-    @Test
-    fun testNoop() {
-        testReaderNoop()
-        testWriterNoop()
-    }
-
-    @Test
-    fun testCompress() {
-        testReaderCompress()
-        testWriterCompress()
-    }
-
-    @Test
-    fun testCompressWithCapacity() {
-        testWriterCompressWithCapacity()
-    }
-
-    @Test
-    fun testDecompress() {
-        testWriterDecompress()
-    }
-
-    @Test
-    fun testDecompressWithCapacity() {
-        testWriterDecompressWithCapacity()
     }
 }

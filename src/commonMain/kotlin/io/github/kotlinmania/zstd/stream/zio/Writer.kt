@@ -9,9 +9,12 @@ import io.github.kotlinmania.zstd.stream.raw.OutBuffer
  * Implements the Write API around an [Operation].
  *
  * This can be used to wrap a raw in-memory operation in a write-focused API.
+ *
+ * It can be used with either compression or decompression, and forwards the
+ * output to a wrapped writer.
  */
 public class Writer(
-    public val operation: Operation,
+    private val operation: Operation,
     private val bufferSize: Int = 32 * 1024,
 ) {
     private var offset: Int = 0
@@ -19,24 +22,53 @@ public class Writer(
     private var finished: Boolean = false
     private var finishedFrame: Boolean = false
 
+    /**
+     * Gives a reference to the inner operation.
+     */
+    public fun operation(): Operation = operation
+
+    /**
+     * Gives a mutable reference to the inner operation.
+     */
     public fun operationMut(): Operation = operation
 
+    /**
+     * Gives a reference to the inner writer.
+     */
     public fun writer(): ByteArray = buffer.toByteArray()
 
+    /**
+     * Gives a mutable reference to the inner writer.
+     */
     public fun writerMut(): ByteArray = buffer.toByteArray()
 
+    /**
+     * Return the wrapped writer and operation.
+     */
     public fun intoInner(): Pair<ByteArray, Operation> = Pair(buffer.toByteArray(), operation)
 
+    /**
+     * Returns the offset in the current buffer.
+     */
     public fun offset(): Int = offset
 
+    /**
+     * Returns the current buffer.
+     */
     public fun buffer(): ByteArray = buffer.toByteArray()
 
+    /**
+     * Attempt to write buffer to the wrapped writer.
+     */
     private fun writeFromOffset() {
         if (offset < buffer.size) {
             offset = buffer.size
         }
     }
 
+    /**
+     * Run the given closure on the buffer.
+     */
     private fun <T> withBuffer(f: (OutBuffer, Operation) -> T): T {
         val chunk = ByteArray(bufferSize)
         val output = OutBuffer.around(chunk)
@@ -47,8 +79,14 @@ public class Writer(
         return result
     }
 
+    /**
+     * Creates a writer with user defined capacity.
+     */
     public fun withBuffer(capacity: Int): Writer = Writer(operation, capacity)
 
+    /**
+     * Writes a buffer of bytes.
+     */
     public fun write(data: ByteArray) {
         if (finished) {
             error("encoder is finished")
@@ -75,6 +113,9 @@ public class Writer(
         }
     }
 
+    /**
+     * Flushes any internal buffer.
+     */
     public fun flush() {
         var finishedFlush = finished
         while (!finishedFlush) {
@@ -86,6 +127,11 @@ public class Writer(
         }
     }
 
+    /**
+     * Ends the stream.
+     *
+     * This must be called after all data has been written to finish the stream.
+     */
     public fun finish(): ByteArray {
         while (!finished) {
             writeFromOffset()
@@ -102,11 +148,20 @@ public class Writer(
     }
 
     public companion object {
+        /**
+         * Creates a new [Writer] with a fixed buffer capacity of 32KB.
+         */
         public fun new(operation: Operation): Writer = Writer(operation)
 
+        /**
+         * Creates a new [Writer] with user defined capacity.
+         */
         public fun newWithCapacity(operation: Operation, capacity: Int): Writer =
             Writer(operation, capacity)
 
+        /**
+         * Creates a new [Writer] using the given output buffer.
+         */
         public fun withOutputBuffer(operation: Operation, capacity: Int): Writer =
             Writer(operation, capacity)
     }

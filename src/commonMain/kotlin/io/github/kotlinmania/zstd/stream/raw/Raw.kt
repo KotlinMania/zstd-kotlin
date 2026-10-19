@@ -203,8 +203,10 @@ public class Encoder(
         parameters.add(parameter)
     }
 
+    private var pledgedSrcSize: Long? = null
+
     public fun setPledgedSrcSize(pledgedSrcSize: Long?) {
-        // Size hint configuration
+        this.pledgedSrcSize = pledgedSrcSize
     }
 
     override fun run(input: InBuffer, output: OutBuffer): Int {
