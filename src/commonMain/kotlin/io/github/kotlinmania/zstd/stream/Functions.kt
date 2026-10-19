@@ -16,7 +16,9 @@ public fun decodeAll(source: ByteArray): ByteArray {
 }
 
 /**
- * Decompress from the given source as if using a [Decoder], copying to destination.
+ * Decompress from the given source as if using a [Decoder].
+ *
+ * Decompressed data will be appended to [destination].
  */
 public fun copyDecode(source: ByteArray, destination: MutableList<Byte>) {
     val decoded = decodeAll(source)
@@ -29,6 +31,8 @@ public fun copyDecode(source: ByteArray, destination: MutableList<Byte>) {
  * Compress all data from the given source as if using an [Encoder].
  *
  * Result will be in the zstd frame format.
+ *
+ * A level of 0 uses zstd's default (currently 3).
  */
 public fun encodeAll(source: ByteArray, level: Int = DEFAULT_COMPRESSION_LEVEL): ByteArray {
     val encoder = Encoder.new(level)
@@ -37,7 +41,11 @@ public fun encodeAll(source: ByteArray, level: Int = DEFAULT_COMPRESSION_LEVEL):
 }
 
 /**
- * Compress all data from the given source as if using an [Encoder], copying to destination.
+ * Compress all data from the given source as if using an [Encoder].
+ *
+ * Compressed data will be appended to [destination].
+ *
+ * A level of 0 uses zstd's default (currently 3).
  */
 public fun copyEncode(source: ByteArray, destination: MutableList<Byte>, level: Int = DEFAULT_COMPRESSION_LEVEL) {
     val encoded = encodeAll(source, level)

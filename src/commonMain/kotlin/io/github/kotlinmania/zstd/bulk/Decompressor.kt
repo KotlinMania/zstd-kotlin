@@ -7,27 +7,57 @@ import io.github.kotlinmania.zstd.dict.DecoderDictionary
 /**
  * Allows to decompress independently multiple blocks of data.
  *
- * This reduces memory usage compared to calling `decompress` multiple times.
+ * This reduces memory usage compared to calling decompress multiple times.
  */
 public class Decompressor(
     private var dictionary: ByteArray = ByteArray(0),
 ) {
+    /**
+     * Changes the dictionary used by this decompressor.
+     *
+     * Will affect future compression jobs.
+     *
+     * Note that using a dictionary means that compression will need to use
+     * the same dictionary.
+     */
     public fun setDictionary(dictionary: ByteArray) {
         this.dictionary = dictionary.copyOf()
     }
 
+    /**
+     * Changes the dictionary used by this decompressor.
+     *
+     * Note that using a dictionary means that compression will need to use
+     * the same dictionary.
+     */
     public fun setPreparedDictionary(dictionary: DecoderDictionary) {
         this.dictionary = dictionary.dictionary.copyOf()
     }
 
+    private val parameters = mutableListOf<DParameter>()
+
+    /**
+     * Sets a decompression parameter for this decompressor.
+     */
     public fun setParameter(parameter: DParameter) {
-        // Parameter configuration
+        parameters.add(parameter)
     }
 
+    /**
+     * Sets the maximum back-reference distance.
+     *
+     * The actual maximum distance is going to be 2^logDistance.
+     */
     public fun windowLogMax(logDistance: Int) {
         setParameter(DParameter.WindowLogMax(logDistance))
     }
 
+    /**
+     * Decompress a single block of data to the given destination buffer.
+     *
+     * Returns the number of bytes written, or throws an error if something happened
+     * (for instance if the destination buffer was too small).
+     */
     public fun decompressToBuffer(source: ByteArray, destination: ByteArray): Int {
         if (source.size < 4) {
             source.copyInto(destination, 0, 0, source.size)
@@ -55,6 +85,12 @@ public class Decompressor(
         }
     }
 
+    /**
+     * Decompress a block of data, and return the result in a byte array.
+     *
+     * The decompressed data should be at most capacity bytes,
+     * or an error will be returned.
+     */
     public fun decompress(data: ByteArray, capacity: Int): ByteArray {
         val dest = ByteArray(capacity)
         val written = decompressToBuffer(data, dest)
@@ -62,20 +98,39 @@ public class Decompressor(
     }
 
     public companion object {
+        /**
+         * Creates a new Zstandard decompressor.
+         */
         public fun new(): Decompressor = Decompressor()
 
+        /**
+         * Creates a new Zstandard decompressor, using the given dictionary.
+         */
         public fun withDictionary(dictionary: ByteArray): Decompressor {
             val d = Decompressor()
             d.setDictionary(dictionary)
             return d
         }
 
+        /**
+         * Creates a new decompressor using an existing [DecoderDictionary].
+         *
+         * Note that using a dictionary means that compression will need to use
+         * the same dictionary.
+         */
         public fun withPreparedDictionary(dictionary: DecoderDictionary): Decompressor {
             val d = Decompressor()
             d.setPreparedDictionary(dictionary)
             return d
         }
 
+        /**
+         * Get an upper bound on the decompressed size of data, if available.
+         *
+         * This can be used to pre-allocate enough capacity for [decompressToBuffer]
+         * and is used by [decompress] to ensure that it does not over-allocate if
+         * you supply a large capacity.
+         */
         public fun upperBound(data: ByteArray): Int? =
             if (data.size >= 4) {
                 val b0 = data[0].toInt() and 0xFF
@@ -92,7 +147,7 @@ public class Decompressor(
 
 private fun assertTraits() {
     fun <T> assertSend(value: T) {
-        // Assert Send compile-time trait parity
+        checkNotNull(value)
     }
     assertSend(Decompressor.new())
 }
