@@ -1,0 +1,527 @@
+
+=== Complete Source Symbol Inventory ===
+Types, API declarations, functions, properties/constants, enum variants and aliases.
+Name/owner presence is distinct from parameter/body/overload parity reported above. Parser warnings remain review requirements.
+PRESENT type Compressor at tmp/zstd/src/bulk/compressor.rs:16 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:14
+MISSING_SYMBOL function new at tmp/zstd/src/bulk/compressor.rs:22
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/bulk/compressor.rs:30
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/bulk/compressor.rs:46
+MISSING_SYMBOL function set_compression_level at tmp/zstd/src/bulk/compressor.rs:65
+MISSING_SYMBOL function set_dictionary at tmp/zstd/src/bulk/compressor.rs:75
+MISSING_SYMBOL function set_prepared_dictionary at tmp/zstd/src/bulk/compressor.rs:97
+MISSING_SYMBOL function compress_to_buffer at tmp/zstd/src/bulk/compressor.rs:117
+MISSING_SYMBOL function compress at tmp/zstd/src/bulk/compressor.rs:130
+MISSING_SYMBOL function context_mut at tmp/zstd/src/bulk/compressor.rs:142
+MISSING_SYMBOL function set_parameter at tmp/zstd/src/bulk/compressor.rs:147
+PRESENT function _assert_traits at tmp/zstd/src/bulk/compressor.rs:160 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:102
+EXTRA_TARGET_SYMBOL property Compressor::level at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:15
+EXTRA_TARGET_SYMBOL property Compressor::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:16
+EXTRA_TARGET_SYMBOL function Compressor::setCompressionLevel at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:18
+EXTRA_TARGET_SYMBOL function Compressor::setDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:23
+EXTRA_TARGET_SYMBOL function Compressor::setPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:28
+EXTRA_TARGET_SYMBOL function Compressor::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:33
+EXTRA_TARGET_SYMBOL function Compressor::includeChecksum at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:40
+EXTRA_TARGET_SYMBOL function Compressor::includeDictid at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:44
+EXTRA_TARGET_SYMBOL function Compressor::includeContentsize at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:48
+EXTRA_TARGET_SYMBOL function Compressor::longDistanceMatching at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:52
+EXTRA_TARGET_SYMBOL function Compressor::setTargetCblockSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:56
+EXTRA_TARGET_SYMBOL function Compressor::windowLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:60
+EXTRA_TARGET_SYMBOL function Compressor::compressToBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:64
+EXTRA_TARGET_SYMBOL function Compressor::compress at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:77
+EXTRA_TARGET_SYMBOL function Compressor::contextMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:83
+EXTRA_TARGET_SYMBOL function Compressor::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:86
+EXTRA_TARGET_SYMBOL function Compressor::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:88
+EXTRA_TARGET_SYMBOL function Compressor::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Compressor.kt:94
+PRESENT type Decompressor at tmp/zstd/src/bulk/decompressor.rs:12 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:12
+MISSING_SYMBOL function new at tmp/zstd/src/bulk/decompressor.rs:18
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/bulk/decompressor.rs:23
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/bulk/decompressor.rs:37
+MISSING_SYMBOL function set_dictionary at tmp/zstd/src/bulk/decompressor.rs:56
+MISSING_SYMBOL function set_prepared_dictionary at tmp/zstd/src/bulk/decompressor.rs:68
+MISSING_SYMBOL function decompress_to_buffer at tmp/zstd/src/bulk/decompressor.rs:86
+MISSING_SYMBOL function decompress at tmp/zstd/src/bulk/decompressor.rs:100
+MISSING_SYMBOL function set_parameter at tmp/zstd/src/bulk/decompressor.rs:113
+MISSING_SYMBOL function upper_bound at tmp/zstd/src/bulk/decompressor.rs:134
+PRESENT function _assert_traits at tmp/zstd/src/bulk/decompressor.rs:147 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:93
+EXTRA_TARGET_SYMBOL property Decompressor::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:13
+EXTRA_TARGET_SYMBOL function Decompressor::setDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:15
+EXTRA_TARGET_SYMBOL function Decompressor::setPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:19
+EXTRA_TARGET_SYMBOL function Decompressor::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:23
+EXTRA_TARGET_SYMBOL function Decompressor::windowLogMax at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:27
+EXTRA_TARGET_SYMBOL function Decompressor::decompressToBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:31
+EXTRA_TARGET_SYMBOL function Decompressor::decompress at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:58
+EXTRA_TARGET_SYMBOL function Decompressor::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:65
+EXTRA_TARGET_SYMBOL function Decompressor::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:67
+EXTRA_TARGET_SYMBOL function Decompressor::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:73
+EXTRA_TARGET_SYMBOL function Decompressor::Companion::upperBound at src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Decompressor.kt:79
+PRESENT function compress_to_buffer at tmp/zstd/src/bulk/mod.rs:24 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Bulk.kt:13
+PRESENT function compress at tmp/zstd/src/bulk/mod.rs:35 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Bulk.kt:24
+PRESENT function decompress_to_buffer at tmp/zstd/src/bulk/mod.rs:43 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Bulk.kt:34
+PRESENT function decompress at tmp/zstd/src/bulk/mod.rs:54 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/bulk/Bulk.kt:44
+MISSING_FILE bulk/tests.rs
+MISSING_SYMBOL property TEXT at tmp/zstd/src/bulk/tests.rs:3
+MISSING_SYMBOL function test_direct at tmp/zstd/src/bulk/tests.rs:6
+MISSING_SYMBOL function test_stream_compat at tmp/zstd/src/bulk/tests.rs:17
+MISSING_SYMBOL function has_content_size at tmp/zstd/src/bulk/tests.rs:34
+PRESENT type EncoderDictionary at tmp/zstd/src/dict.rs:26 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:10
+MISSING_SYMBOL function copy at tmp/zstd/src/dict.rs:34
+MISSING_SYMBOL function new at tmp/zstd/src/dict.rs:49
+MISSING_SYMBOL function as_cdict at tmp/zstd/src/dict.rs:56
+PRESENT type DecoderDictionary at tmp/zstd/src/dict.rs:62 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:41
+MISSING_SYMBOL function copy at tmp/zstd/src/dict.rs:70
+MISSING_SYMBOL function new at tmp/zstd/src/dict.rs:83
+MISSING_SYMBOL function as_ddict at tmp/zstd/src/dict.rs:90
+PRESENT function from_continuous at tmp/zstd/src/dict.rs:109 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:72
+PRESENT function from_samples at tmp/zstd/src/dict.rs:146 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:96
+PRESENT function from_sample_iterator at tmp/zstd/src/dict.rs:202 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:115
+PRESENT function from_files at tmp/zstd/src/dict.rs:231 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:126
+MISSING_SYMBOL function test_dict_training at tmp/zstd/src/dict.rs:254
+EXTRA_TARGET_SYMBOL property EncoderDictionary::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:11
+EXTRA_TARGET_SYMBOL property EncoderDictionary::level at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:12
+EXTRA_TARGET_SYMBOL function EncoderDictionary::asCdict at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:17
+EXTRA_TARGET_SYMBOL function EncoderDictionary::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:23
+EXTRA_TARGET_SYMBOL function EncoderDictionary::Companion::copy at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:31
+EXTRA_TARGET_SYMBOL property DecoderDictionary::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:42
+EXTRA_TARGET_SYMBOL function DecoderDictionary::asDdict at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:47
+EXTRA_TARGET_SYMBOL function DecoderDictionary::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:53
+EXTRA_TARGET_SYMBOL function DecoderDictionary::Companion::copy at src/commonMain/kotlin/io/github/kotlinmania/zstd/dict/Dict.kt:58
+EXTRA_TARGET_SYMBOL type DictTest at src/commonTest/kotlin/io/github/kotlinmania/zstd/dict/DictTest.kt:8
+EXTRA_TARGET_SYMBOL function DictTest::testDictionaryCopy at src/commonTest/kotlin/io/github/kotlinmania/zstd/dict/DictTest.kt:9
+EXTRA_TARGET_SYMBOL function DictTest::testFromContinuous at src/commonTest/kotlin/io/github/kotlinmania/zstd/dict/DictTest.kt:20
+EXTRA_TARGET_SYMBOL function DictTest::testFromSamples at src/commonTest/kotlin/io/github/kotlinmania/zstd/dict/DictTest.kt:32
+EXTRA_TARGET_SYMBOL function DictTest::testDictTraining at src/commonTest/kotlin/io/github/kotlinmania/zstd/dict/DictTest.kt:41
+PRESENT function compression_level_range at tmp/zstd/src/lib.rs:39 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:22
+PRESENT function map_error_code at tmp/zstd/src/lib.rs:48 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:144
+MISSING_SYMBOL function test_cycle at tmp/zstd/src/lib.rs:56
+MISSING_SYMBOL function test_cycle_unwrap at tmp/zstd/src/lib.rs:67
+MISSING_SYMBOL function default_compression_level_in_range at tmp/zstd/src/lib.rs:76
+EXTRA_TARGET_SYMBOL property DEFAULT_COMPRESSION_LEVEL at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:7
+EXTRA_TARGET_SYMBOL property MIN_COMPRESSION_LEVEL at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:12
+EXTRA_TARGET_SYMBOL property MAX_COMPRESSION_LEVEL at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:17
+EXTRA_TARGET_SYMBOL type FrameFormat at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:27
+EXTRA_TARGET_SYMBOL enum_variant FrameFormat::One at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:31
+EXTRA_TARGET_SYMBOL enum_variant FrameFormat::Magicless at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:36
+EXTRA_TARGET_SYMBOL type CParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:42
+EXTRA_TARGET_SYMBOL type CParameter::CompressionLevel at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:43
+EXTRA_TARGET_SYMBOL property CParameter::CompressionLevel::level at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:44
+EXTRA_TARGET_SYMBOL type CParameter::WindowLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:47
+EXTRA_TARGET_SYMBOL property CParameter::WindowLog::logDistance at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:48
+EXTRA_TARGET_SYMBOL type CParameter::HashLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:51
+EXTRA_TARGET_SYMBOL property CParameter::HashLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:52
+EXTRA_TARGET_SYMBOL type CParameter::ChainLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:55
+EXTRA_TARGET_SYMBOL property CParameter::ChainLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:56
+EXTRA_TARGET_SYMBOL type CParameter::SearchLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:59
+EXTRA_TARGET_SYMBOL property CParameter::SearchLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:60
+EXTRA_TARGET_SYMBOL type CParameter::MinMatch at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:63
+EXTRA_TARGET_SYMBOL property CParameter::MinMatch::length at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:64
+EXTRA_TARGET_SYMBOL type CParameter::TargetLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:67
+EXTRA_TARGET_SYMBOL property CParameter::TargetLength::length at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:68
+EXTRA_TARGET_SYMBOL type CParameter::Strategy at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:71
+EXTRA_TARGET_SYMBOL property CParameter::Strategy::strategy at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:72
+EXTRA_TARGET_SYMBOL type CParameter::EnableLongDistanceMatching at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:75
+EXTRA_TARGET_SYMBOL property CParameter::EnableLongDistanceMatching::enabled at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:76
+EXTRA_TARGET_SYMBOL type CParameter::LdmHashLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:79
+EXTRA_TARGET_SYMBOL property CParameter::LdmHashLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:80
+EXTRA_TARGET_SYMBOL type CParameter::LdmMinMatch at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:83
+EXTRA_TARGET_SYMBOL property CParameter::LdmMinMatch::length at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:84
+EXTRA_TARGET_SYMBOL type CParameter::LdmBucketSizeLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:87
+EXTRA_TARGET_SYMBOL property CParameter::LdmBucketSizeLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:88
+EXTRA_TARGET_SYMBOL type CParameter::LdmHashRateLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:91
+EXTRA_TARGET_SYMBOL property CParameter::LdmHashRateLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:92
+EXTRA_TARGET_SYMBOL type CParameter::ContentSizeFlag at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:95
+EXTRA_TARGET_SYMBOL property CParameter::ContentSizeFlag::enabled at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:96
+EXTRA_TARGET_SYMBOL type CParameter::ChecksumFlag at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:99
+EXTRA_TARGET_SYMBOL property CParameter::ChecksumFlag::enabled at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:100
+EXTRA_TARGET_SYMBOL type CParameter::DictIdFlag at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:103
+EXTRA_TARGET_SYMBOL property CParameter::DictIdFlag::enabled at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:104
+EXTRA_TARGET_SYMBOL type CParameter::NbWorkers at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:107
+EXTRA_TARGET_SYMBOL property CParameter::NbWorkers::workers at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:108
+EXTRA_TARGET_SYMBOL type CParameter::JobSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:111
+EXTRA_TARGET_SYMBOL property CParameter::JobSize::size at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:112
+EXTRA_TARGET_SYMBOL type CParameter::OverlapLog at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:115
+EXTRA_TARGET_SYMBOL property CParameter::OverlapLog::logLength at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:116
+EXTRA_TARGET_SYMBOL type CParameter::TargetCBlockSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:119
+EXTRA_TARGET_SYMBOL property CParameter::TargetCBlockSize::size at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:120
+EXTRA_TARGET_SYMBOL type CParameter::Format at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:123
+EXTRA_TARGET_SYMBOL property CParameter::Format::format at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:124
+EXTRA_TARGET_SYMBOL type DParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:131
+EXTRA_TARGET_SYMBOL type DParameter::WindowLogMax at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:132
+EXTRA_TARGET_SYMBOL property DParameter::WindowLogMax::logDistance at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:133
+EXTRA_TARGET_SYMBOL type DParameter::Format at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:136
+EXTRA_TARGET_SYMBOL property DParameter::Format::format at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:137
+EXTRA_TARGET_SYMBOL function decodeAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:149
+EXTRA_TARGET_SYMBOL function encodeAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/Lib.kt:156
+EXTRA_TARGET_SYMBOL type LibTest at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:8
+EXTRA_TARGET_SYMBOL function LibTest::testCycle at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:9
+EXTRA_TARGET_SYMBOL function LibTest::testCycleUnwrap at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:15
+EXTRA_TARGET_SYMBOL function LibTest::defaultCompressionLevelInRange at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:19
+EXTRA_TARGET_SYMBOL function LibTest::frameFormatVariants at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:27
+EXTRA_TARGET_SYMBOL function LibTest::testMapErrorCode at src/commonTest/kotlin/io/github/kotlinmania/zstd/LibTest.kt:35
+PRESENT function decode_all at tmp/zstd/src/stream/functions.rs:8 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Functions.kt:13
+PRESENT function copy_decode at tmp/zstd/src/stream/functions.rs:17 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Functions.kt:21
+PRESENT function encode_all at tmp/zstd/src/stream/functions.rs:32 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Functions.kt:33
+PRESENT function copy_encode at tmp/zstd/src/stream/functions.rs:43 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Functions.kt:42
+EXTRA_TARGET_SYMBOL type Mod at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Mod.kt:7
+EXTRA_TARGET_SYMBOL function Mod::decodeAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Mod.kt:8
+EXTRA_TARGET_SYMBOL function Mod::encodeAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Mod.kt:12
+EXTRA_TARGET_SYMBOL function Mod::copyDecode at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Mod.kt:16
+EXTRA_TARGET_SYMBOL function Mod::copyEncode at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/Mod.kt:20
+PRESENT type Operation at tmp/zstd/src/stream/raw.rs:17 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:50
+PRESENT function Operation::run_on_buffers at tmp/zstd/src/stream/raw.rs:34 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:61
+PRESENT function Operation::flush at tmp/zstd/src/stream/raw.rs:55 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:75
+PRESENT function Operation::reinit at tmp/zstd/src/stream/raw.rs:66 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:80
+PRESENT function Operation::finish at tmp/zstd/src/stream/raw.rs:76 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:85
+PRESENT type NoOp at tmp/zstd/src/stream/raw.rs:88 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:91
+MISSING_SYMBOL function run at tmp/zstd/src/stream/raw.rs:91
+PRESENT type Status at tmp/zstd/src/stream/raw.rs:118 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:41
+PRESENT type Decoder at tmp/zstd/src/stream/raw.rs:134 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:108
+MISSING_SYMBOL function new at tmp/zstd/src/stream/raw.rs:140
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/raw.rs:145
+MISSING_SYMBOL function with_context at tmp/zstd/src/stream/raw.rs:159
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/raw.rs:166
+MISSING_SYMBOL function with_ref_prefix at tmp/zstd/src/stream/raw.rs:182
+MISSING_SYMBOL function set_parameter at tmp/zstd/src/stream/raw.rs:194
+MISSING_SYMBOL function run at tmp/zstd/src/stream/raw.rs:205
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/raw.rs:217
+MISSING_SYMBOL function reinit at tmp/zstd/src/stream/raw.rs:234
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/raw.rs:247
+PRESENT type Encoder at tmp/zstd/src/stream/raw.rs:264 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:192
+MISSING_SYMBOL function new at tmp/zstd/src/stream/raw.rs:270
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/raw.rs:275
+MISSING_SYMBOL function with_context at tmp/zstd/src/stream/raw.rs:294
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/raw.rs:301
+MISSING_SYMBOL function with_ref_prefix at tmp/zstd/src/stream/raw.rs:317
+MISSING_SYMBOL function set_parameter at tmp/zstd/src/stream/raw.rs:338
+MISSING_SYMBOL function set_pledged_src_size at tmp/zstd/src/stream/raw.rs:355
+MISSING_SYMBOL function run at tmp/zstd/src/stream/raw.rs:373
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/raw.rs:385
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/raw.rs:396
+MISSING_SYMBOL function reinit at tmp/zstd/src/stream/raw.rs:408
+PRESENT type MaybeOwnedCCtx at tmp/zstd/src/stream/raw.rs:422 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:264
+MISSING_SYMBOL enum_variant MaybeOwnedCCtx::Owned at tmp/zstd/src/stream/raw.rs:423
+MISSING_SYMBOL enum_variant MaybeOwnedCCtx::Borrowed at tmp/zstd/src/stream/raw.rs:424
+PRESENT type MaybeOwnedDCtx at tmp/zstd/src/stream/raw.rs:427 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:277
+MISSING_SYMBOL enum_variant MaybeOwnedDCtx::Owned at tmp/zstd/src/stream/raw.rs:428
+MISSING_SYMBOL enum_variant MaybeOwnedDCtx::Borrowed at tmp/zstd/src/stream/raw.rs:429
+MISSING_SYMBOL function test_cycle at tmp/zstd/src/stream/raw.rs:438
+EXTRA_TARGET_SYMBOL type InBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:13
+EXTRA_TARGET_SYMBOL property InBuffer::src at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:14
+EXTRA_TARGET_SYMBOL property InBuffer::pos at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:15
+EXTRA_TARGET_SYMBOL function InBuffer::Companion::around at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:18
+EXTRA_TARGET_SYMBOL type OutBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:25
+EXTRA_TARGET_SYMBOL property OutBuffer::dst at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:26
+EXTRA_TARGET_SYMBOL property OutBuffer::pos at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:27
+EXTRA_TARGET_SYMBOL function OutBuffer::capacity at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:29
+EXTRA_TARGET_SYMBOL function OutBuffer::asSlice at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:31
+EXTRA_TARGET_SYMBOL function OutBuffer::Companion::around at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:34
+EXTRA_TARGET_SYMBOL property Status::remaining at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:42
+EXTRA_TARGET_SYMBOL property Status::bytesRead at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:43
+EXTRA_TARGET_SYMBOL property Status::bytesWritten at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:44
+EXTRA_TARGET_SYMBOL function Operation::run at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:56
+EXTRA_TARGET_SYMBOL function NoOp::run at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:92
+EXTRA_TARGET_SYMBOL property Decoder::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:109
+EXTRA_TARGET_SYMBOL property Decoder::parameters at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:111
+EXTRA_TARGET_SYMBOL property Decoder::singleFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:112
+EXTRA_TARGET_SYMBOL property Decoder::framesDecoded at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:113
+EXTRA_TARGET_SYMBOL function Decoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:115
+EXTRA_TARGET_SYMBOL function Decoder::run at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:119
+EXTRA_TARGET_SYMBOL function Decoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:167
+EXTRA_TARGET_SYMBOL function Decoder::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:169
+EXTRA_TARGET_SYMBOL function Decoder::reinit at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:171
+EXTRA_TARGET_SYMBOL function Decoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:176
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:178
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:180
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withRefPrefix at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:183
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withContext at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:185
+EXTRA_TARGET_SYMBOL property Encoder::level at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:193
+EXTRA_TARGET_SYMBOL property Encoder::dictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:194
+EXTRA_TARGET_SYMBOL property Encoder::headerWritten at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:196
+EXTRA_TARGET_SYMBOL property Encoder::parameters at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:197
+EXTRA_TARGET_SYMBOL function Encoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:199
+EXTRA_TARGET_SYMBOL function Encoder::setPledgedSrcSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:206
+EXTRA_TARGET_SYMBOL function Encoder::run at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:210
+EXTRA_TARGET_SYMBOL function Encoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:237
+EXTRA_TARGET_SYMBOL function Encoder::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:239
+EXTRA_TARGET_SYMBOL function Encoder::reinit at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:241
+EXTRA_TARGET_SYMBOL function Encoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:246
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:248
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:251
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withRefPrefix at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:254
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withContext at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:257
+EXTRA_TARGET_SYMBOL type MaybeOwnedCCtx::Owned at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:265
+EXTRA_TARGET_SYMBOL property MaybeOwnedCCtx::Owned::context at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:266
+EXTRA_TARGET_SYMBOL type MaybeOwnedCCtx::Borrowed at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:269
+EXTRA_TARGET_SYMBOL property MaybeOwnedCCtx::Borrowed::context at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:270
+EXTRA_TARGET_SYMBOL type MaybeOwnedDCtx::Owned at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:278
+EXTRA_TARGET_SYMBOL property MaybeOwnedDCtx::Owned::context at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:279
+EXTRA_TARGET_SYMBOL type MaybeOwnedDCtx::Borrowed at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:282
+EXTRA_TARGET_SYMBOL property MaybeOwnedDCtx::Borrowed::context at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/raw/Raw.kt:283
+EXTRA_TARGET_SYMBOL type RawTest at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/raw/RawTest.kt:7
+EXTRA_TARGET_SYMBOL function RawTest::testNoOpOperation at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/raw/RawTest.kt:8
+EXTRA_TARGET_SYMBOL function RawTest::testInBufferAndOutBuffer at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/raw/RawTest.kt:20
+EXTRA_TARGET_SYMBOL function RawTest::testCycle at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/raw/RawTest.kt:31
+PARSER_REVIEW src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt: parser errors; symbol inventory may be incomplete
+PARSER_REVIEW src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:20-21: ERROR ERROR
+PRESENT type Decoder at tmp/zstd/src/stream/read/mod.rs:15 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:16
+PRESENT type Encoder at tmp/zstd/src/stream/read/mod.rs:20 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:72
+MISSING_SYMBOL function new at tmp/zstd/src/stream/read/mod.rs:26
+MISSING_SYMBOL function with_buffer at tmp/zstd/src/stream/read/mod.rs:35
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/read/mod.rs:41
+MISSING_SYMBOL function with_context at tmp/zstd/src/stream/read/mod.rs:50
+MISSING_SYMBOL function single_frame at tmp/zstd/src/stream/read/mod.rs:66
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/read/mod.rs:74
+MISSING_SYMBOL function with_ref_prefix at tmp/zstd/src/stream/read/mod.rs:90
+MISSING_SYMBOL function recommended_output_size at tmp/zstd/src/stream/read/mod.rs:104
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/read/mod.rs:109
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/read/mod.rs:117
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/read/mod.rs:125
+MISSING_SYMBOL function read at tmp/zstd/src/stream/read/mod.rs:133
+MISSING_SYMBOL function new at tmp/zstd/src/stream/read/mod.rs:140
+MISSING_SYMBOL function with_buffer at tmp/zstd/src/stream/read/mod.rs:149
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/read/mod.rs:156
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/read/mod.rs:172
+MISSING_SYMBOL function recommended_output_size at tmp/zstd/src/stream/read/mod.rs:186
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/read/mod.rs:191
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/read/mod.rs:199
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/read/mod.rs:212
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/read/mod.rs:220
+MISSING_SYMBOL function read at tmp/zstd/src/stream/read/mod.rs:228
+MISSING_SYMBOL function _assert_traits at tmp/zstd/src/stream/read/mod.rs:233
+EXTRA_TARGET_SYMBOL property Decoder::reader at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:17
+EXTRA_TARGET_SYMBOL function Decoder::singleFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:19
+EXTRA_TARGET_SYMBOL function Decoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:25
+EXTRA_TARGET_SYMBOL function Decoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:27
+EXTRA_TARGET_SYMBOL function Decoder::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:29
+EXTRA_TARGET_SYMBOL function Decoder::read at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:31
+EXTRA_TARGET_SYMBOL function Decoder::readAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:33
+EXTRA_TARGET_SYMBOL function Decoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:35
+EXTRA_TARGET_SYMBOL function Decoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:40
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:45
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:47
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withContext at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:52
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:55
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withRefPrefix at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:60
+EXTRA_TARGET_SYMBOL function Decoder::Companion::recommendedOutputSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:65
+EXTRA_TARGET_SYMBOL property Encoder::reader at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:73
+EXTRA_TARGET_SYMBOL function Encoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:75
+EXTRA_TARGET_SYMBOL function Encoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:77
+EXTRA_TARGET_SYMBOL function Encoder::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:79
+EXTRA_TARGET_SYMBOL function Encoder::read at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:81
+EXTRA_TARGET_SYMBOL function Encoder::readAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:83
+EXTRA_TARGET_SYMBOL function Encoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:85
+EXTRA_TARGET_SYMBOL function Encoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:87
+EXTRA_TARGET_SYMBOL function Encoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:92
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:97
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:100
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:109
+EXTRA_TARGET_SYMBOL function Encoder::Companion::recommendedOutputSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/read/Decoder.kt:117
+MISSING_FILE stream/read/tests.rs
+MISSING_SYMBOL function test_error_handling at tmp/zstd/src/stream/read/tests.rs:5
+MISSING_SYMBOL function test_cycle at tmp/zstd/src/stream/read/tests.rs:15
+MISSING_FILE stream/tests.rs
+MISSING_SYMBOL function test_end_of_frame at tmp/zstd/src/stream/tests.rs:10
+MISSING_SYMBOL function test_concatenated_frames at tmp/zstd/src/stream/tests.rs:28
+MISSING_SYMBOL function test_flush at tmp/zstd/src/stream/tests.rs:42
+MISSING_SYMBOL function test_try_finish at tmp/zstd/src/stream/tests.rs:58
+MISSING_SYMBOL function test_write_after_try_finish at tmp/zstd/src/stream/tests.rs:79
+MISSING_SYMBOL function setup_try_finish at tmp/zstd/src/stream/tests.rs:85
+MISSING_SYMBOL function test_failing_write at tmp/zstd/src/stream/tests.rs:108
+MISSING_SYMBOL function test_invalid_frame at tmp/zstd/src/stream/tests.rs:145
+MISSING_SYMBOL function test_incomplete_frame at tmp/zstd/src/stream/tests.rs:159
+MISSING_SYMBOL function test_cli_compatibility at tmp/zstd/src/stream/tests.rs:178
+MISSING_SYMBOL function test_legacy at tmp/zstd/src/stream/tests.rs:194
+MISSING_SYMBOL function test_full_cycle at tmp/zstd/src/stream/tests.rs:219
+MISSING_SYMBOL function test_empty at tmp/zstd/src/stream/tests.rs:228
+MISSING_SYMBOL function test_ll_source at tmp/zstd/src/stream/tests.rs:236
+MISSING_SYMBOL function reader_to_writer at tmp/zstd/src/stream/tests.rs:248
+MISSING_SYMBOL function test_finish_empty_encoder at tmp/zstd/src/stream/tests.rs:272
+PRESENT type Encoder at tmp/zstd/src/stream/write/mod.rs:27 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:56
+PRESENT type Decoder at tmp/zstd/src/stream/write/mod.rs:38 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:123
+PRESENT type AutoFinishEncoder at tmp/zstd/src/stream/write/mod.rs:49 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:16
+PRESENT type AutoFlushDecoder at tmp/zstd/src/stream/write/mod.rs:66 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:36
+MISSING_SYMBOL function new at tmp/zstd/src/stream/write/mod.rs:78
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/write/mod.rs:86
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/write/mod.rs:96
+MISSING_SYMBOL function drop at tmp/zstd/src/stream/write/mod.rs:106
+MISSING_SYMBOL function write at tmp/zstd/src/stream/write/mod.rs:116
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/write/mod.rs:120
+MISSING_SYMBOL function new at tmp/zstd/src/stream/write/mod.rs:126
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/write/mod.rs:134
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/write/mod.rs:144
+MISSING_SYMBOL function drop at tmp/zstd/src/stream/write/mod.rs:150
+MISSING_SYMBOL function write at tmp/zstd/src/stream/write/mod.rs:159
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/write/mod.rs:163
+MISSING_SYMBOL function new at tmp/zstd/src/stream/write/mod.rs:174
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/write/mod.rs:184
+MISSING_SYMBOL function with_writer at tmp/zstd/src/stream/write/mod.rs:196
+MISSING_SYMBOL function with_encoder at tmp/zstd/src/stream/write/mod.rs:201
+MISSING_SYMBOL function with_context at tmp/zstd/src/stream/write/mod.rs:207
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/write/mod.rs:219
+MISSING_SYMBOL function with_ref_prefix at tmp/zstd/src/stream/write/mod.rs:231
+MISSING_SYMBOL function auto_finish at tmp/zstd/src/stream/write/mod.rs:244
+MISSING_SYMBOL function on_finish at tmp/zstd/src/stream/write/mod.rs:255
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/write/mod.rs:263
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/write/mod.rs:271
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/write/mod.rs:287
+MISSING_SYMBOL function try_finish at tmp/zstd/src/stream/write/mod.rs:301
+MISSING_SYMBOL function do_finish at tmp/zstd/src/stream/write/mod.rs:313
+MISSING_SYMBOL function recommended_input_size at tmp/zstd/src/stream/write/mod.rs:318
+MISSING_SYMBOL function write at tmp/zstd/src/stream/write/mod.rs:326
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/write/mod.rs:330
+MISSING_SYMBOL function new at tmp/zstd/src/stream/write/mod.rs:337
+MISSING_SYMBOL function with_dictionary at tmp/zstd/src/stream/write/mod.rs:345
+MISSING_SYMBOL function with_writer at tmp/zstd/src/stream/write/mod.rs:363
+MISSING_SYMBOL function with_decoder at tmp/zstd/src/stream/write/mod.rs:368
+MISSING_SYMBOL function with_prepared_dictionary at tmp/zstd/src/stream/write/mod.rs:377
+MISSING_SYMBOL function get_ref at tmp/zstd/src/stream/write/mod.rs:389
+MISSING_SYMBOL function get_mut at tmp/zstd/src/stream/write/mod.rs:397
+MISSING_SYMBOL function into_inner at tmp/zstd/src/stream/write/mod.rs:402
+MISSING_SYMBOL function recommended_input_size at tmp/zstd/src/stream/write/mod.rs:407
+MISSING_SYMBOL function auto_flush at tmp/zstd/src/stream/write/mod.rs:412
+MISSING_SYMBOL function on_flush at tmp/zstd/src/stream/write/mod.rs:423
+MISSING_SYMBOL function write at tmp/zstd/src/stream/write/mod.rs:434
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/write/mod.rs:438
+MISSING_SYMBOL function _assert_traits at tmp/zstd/src/stream/write/mod.rs:443
+EXTRA_TARGET_SYMBOL property AutoFinishEncoder::encoder at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:17
+EXTRA_TARGET_SYMBOL property AutoFinishEncoder::onFinish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:18
+EXTRA_TARGET_SYMBOL function AutoFinishEncoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:20
+EXTRA_TARGET_SYMBOL function AutoFinishEncoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:22
+EXTRA_TARGET_SYMBOL function AutoFinishEncoder::write at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:24
+EXTRA_TARGET_SYMBOL function AutoFinishEncoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:28
+EXTRA_TARGET_SYMBOL property AutoFlushDecoder::decoder at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:37
+EXTRA_TARGET_SYMBOL property AutoFlushDecoder::onFlush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:38
+EXTRA_TARGET_SYMBOL function AutoFlushDecoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:40
+EXTRA_TARGET_SYMBOL function AutoFlushDecoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:42
+EXTRA_TARGET_SYMBOL function AutoFlushDecoder::write at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:44
+EXTRA_TARGET_SYMBOL function AutoFlushDecoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:48
+EXTRA_TARGET_SYMBOL property Encoder::writer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:57
+EXTRA_TARGET_SYMBOL function Encoder::write at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:59
+EXTRA_TARGET_SYMBOL function Encoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:63
+EXTRA_TARGET_SYMBOL function Encoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:67
+EXTRA_TARGET_SYMBOL function Encoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:69
+EXTRA_TARGET_SYMBOL function Encoder::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:71
+EXTRA_TARGET_SYMBOL function Encoder::tryFinish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:73
+EXTRA_TARGET_SYMBOL function Encoder::doFinish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:75
+EXTRA_TARGET_SYMBOL function Encoder::autoFinish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:79
+EXTRA_TARGET_SYMBOL function Encoder::onFinish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:81
+EXTRA_TARGET_SYMBOL function Encoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:84
+EXTRA_TARGET_SYMBOL function Encoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:89
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:94
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withWriter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:99
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withEncoder at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:101
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withContext at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:103
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:106
+EXTRA_TARGET_SYMBOL function Encoder::Companion::withRefPrefix at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:111
+EXTRA_TARGET_SYMBOL function Encoder::Companion::recommendedInputSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:116
+EXTRA_TARGET_SYMBOL property Decoder::writer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:124
+EXTRA_TARGET_SYMBOL function Decoder::write at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:126
+EXTRA_TARGET_SYMBOL function Decoder::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:130
+EXTRA_TARGET_SYMBOL function Decoder::getRef at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:134
+EXTRA_TARGET_SYMBOL function Decoder::getMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:136
+EXTRA_TARGET_SYMBOL function Decoder::intoInner at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:138
+EXTRA_TARGET_SYMBOL function Decoder::autoFlush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:140
+EXTRA_TARGET_SYMBOL function Decoder::onFlush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:142
+EXTRA_TARGET_SYMBOL function Decoder::setParameter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:145
+EXTRA_TARGET_SYMBOL function Decoder::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:150
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:155
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withWriter at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:160
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withDecoder at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:162
+EXTRA_TARGET_SYMBOL function Decoder::Companion::withPreparedDictionary at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:164
+EXTRA_TARGET_SYMBOL function Decoder::Companion::recommendedInputSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/write/Encoder.kt:169
+MISSING_FILE stream/write/tests.rs
+MISSING_SYMBOL function test_cycle at tmp/zstd/src/stream/write/tests.rs:10
+MISSING_SYMBOL function test_partial_write_flush at tmp/zstd/src/stream/write/tests.rs:33
+MISSING_SYMBOL function test_partial_write_finish at tmp/zstd/src/stream/write/tests.rs:48
+MISSING_SYMBOL function setup_partial_write at tmp/zstd/src/stream/write/tests.rs:57
+EXTRA_TARGET_SYMBOL type Mod at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Mod.kt:7
+PRESENT type Reader at tmp/zstd/src/stream/zio/reader.rs:12 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:22
+PRESENT type State at tmp/zstd/src/stream/zio/reader.rs:22 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:11
+PRESENT enum_variant State::Reading at tmp/zstd/src/stream/zio/reader.rs:24 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:12
+PRESENT enum_variant State::PastEof at tmp/zstd/src/stream/zio/reader.rs:26 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:13
+PRESENT enum_variant State::Finished at tmp/zstd/src/stream/zio/reader.rs:28 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:14
+MISSING_SYMBOL function new at tmp/zstd/src/stream/zio/reader.rs:35
+MISSING_SYMBOL function set_single_frame at tmp/zstd/src/stream/zio/reader.rs:46
+MISSING_SYMBOL function operation_mut at tmp/zstd/src/stream/zio/reader.rs:51
+MISSING_SYMBOL function reader_mut at tmp/zstd/src/stream/zio/reader.rs:56
+MISSING_SYMBOL function reader at tmp/zstd/src/stream/zio/reader.rs:61
+MISSING_SYMBOL function into_inner at tmp/zstd/src/stream/zio/reader.rs:66
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/zio/reader.rs:73
+MISSING_SYMBOL function fill_buf at tmp/zstd/src/stream/zio/reader.rs:81
+MISSING_SYMBOL function read at tmp/zstd/src/stream/zio/reader.rs:110
+MISSING_SYMBOL function test_noop at tmp/zstd/src/stream/zio/reader.rs:210
+MISSING_SYMBOL function test_compress at tmp/zstd/src/stream/zio/reader.rs:225
+EXTRA_TARGET_SYMBOL property Reader::source at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:23
+EXTRA_TARGET_SYMBOL property Reader::operation at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:24
+EXTRA_TARGET_SYMBOL property Reader::offset at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:26
+EXTRA_TARGET_SYMBOL property Reader::state at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:27
+EXTRA_TARGET_SYMBOL property Reader::singleFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:28
+EXTRA_TARGET_SYMBOL property Reader::finishedFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:29
+EXTRA_TARGET_SYMBOL function Reader::setSingleFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:31
+EXTRA_TARGET_SYMBOL function Reader::operationMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:35
+EXTRA_TARGET_SYMBOL function Reader::reader at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:37
+EXTRA_TARGET_SYMBOL function Reader::readerMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:39
+EXTRA_TARGET_SYMBOL function Reader::intoInner at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:41
+EXTRA_TARGET_SYMBOL function Reader::offset at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:43
+EXTRA_TARGET_SYMBOL function Reader::buffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:45
+EXTRA_TARGET_SYMBOL function Reader::fillBuf at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:47
+EXTRA_TARGET_SYMBOL function Reader::read at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:50
+EXTRA_TARGET_SYMBOL function Reader::readAll at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:80
+EXTRA_TARGET_SYMBOL function Reader::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:93
+EXTRA_TARGET_SYMBOL function Reader::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Reader.kt:99
+EXTRA_TARGET_SYMBOL type ZioTest at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:13
+EXTRA_TARGET_SYMBOL property ZioTest::input at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:14
+EXTRA_TARGET_SYMBOL function ZioTest::testReaderNoop at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:16
+EXTRA_TARGET_SYMBOL function ZioTest::testReaderCompress at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:23
+EXTRA_TARGET_SYMBOL function ZioTest::testWriterNoop at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:31
+EXTRA_TARGET_SYMBOL function ZioTest::testWriterCompress at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:39
+EXTRA_TARGET_SYMBOL function ZioTest::testWriterCompressWithCapacity at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:48
+EXTRA_TARGET_SYMBOL function ZioTest::testWriterDecompress at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:57
+EXTRA_TARGET_SYMBOL function ZioTest::testWriterDecompressWithCapacity at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:66
+EXTRA_TARGET_SYMBOL function ZioTest::testNoop at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:75
+EXTRA_TARGET_SYMBOL function ZioTest::testCompress at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:81
+EXTRA_TARGET_SYMBOL function ZioTest::testCompressWithCapacity at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:87
+EXTRA_TARGET_SYMBOL function ZioTest::testDecompress at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:92
+EXTRA_TARGET_SYMBOL function ZioTest::testDecompressWithCapacity at src/commonTest/kotlin/io/github/kotlinmania/zstd/stream/zio/ZioTest.kt:97
+PRESENT type Writer at tmp/zstd/src/stream/zio/writer.rs:13 -> src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:13
+MISSING_SYMBOL function new at tmp/zstd/src/stream/zio/writer.rs:49
+MISSING_SYMBOL function new_with_capacity at tmp/zstd/src/stream/zio/writer.rs:57
+MISSING_SYMBOL function with_output_buffer at tmp/zstd/src/stream/zio/writer.rs:74
+MISSING_SYMBOL function finish at tmp/zstd/src/stream/zio/writer.rs:101
+MISSING_SYMBOL function with_buffer at tmp/zstd/src/stream/zio/writer.rs:141
+MISSING_SYMBOL function write_from_offset at tmp/zstd/src/stream/zio/writer.rs:154
+MISSING_SYMBOL function into_inner at tmp/zstd/src/stream/zio/writer.rs:177
+MISSING_SYMBOL function writer at tmp/zstd/src/stream/zio/writer.rs:182
+MISSING_SYMBOL function writer_mut at tmp/zstd/src/stream/zio/writer.rs:187
+MISSING_SYMBOL function operation at tmp/zstd/src/stream/zio/writer.rs:192
+MISSING_SYMBOL function operation_mut at tmp/zstd/src/stream/zio/writer.rs:197
+MISSING_SYMBOL function offset at tmp/zstd/src/stream/zio/writer.rs:203
+MISSING_SYMBOL function buffer at tmp/zstd/src/stream/zio/writer.rs:209
+MISSING_SYMBOL function write at tmp/zstd/src/stream/zio/writer.rs:219
+MISSING_SYMBOL function flush at tmp/zstd/src/stream/zio/writer.rs:266
+MISSING_SYMBOL function test_noop at tmp/zstd/src/stream/zio/writer.rs:294
+MISSING_SYMBOL function test_compress at tmp/zstd/src/stream/zio/writer.rs:310
+MISSING_SYMBOL function test_compress_with_capacity at tmp/zstd/src/stream/zio/writer.rs:329
+MISSING_SYMBOL function test_decompress at tmp/zstd/src/stream/zio/writer.rs:351
+MISSING_SYMBOL function test_decompress_with_capacity at tmp/zstd/src/stream/zio/writer.rs:369
+EXTRA_TARGET_SYMBOL property Writer::operation at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:14
+EXTRA_TARGET_SYMBOL property Writer::bufferSize at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:15
+EXTRA_TARGET_SYMBOL property Writer::offset at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:17
+EXTRA_TARGET_SYMBOL property Writer::buffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:18
+EXTRA_TARGET_SYMBOL property Writer::finished at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:19
+EXTRA_TARGET_SYMBOL property Writer::finishedFrame at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:20
+EXTRA_TARGET_SYMBOL function Writer::operationMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:22
+EXTRA_TARGET_SYMBOL function Writer::writer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:24
+EXTRA_TARGET_SYMBOL function Writer::writerMut at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:26
+EXTRA_TARGET_SYMBOL function Writer::intoInner at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:28
+EXTRA_TARGET_SYMBOL function Writer::offset at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:30
+EXTRA_TARGET_SYMBOL function Writer::buffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:32
+EXTRA_TARGET_SYMBOL function Writer::writeFromOffset at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:34
+EXTRA_TARGET_SYMBOL function Writer::withBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:40
+EXTRA_TARGET_SYMBOL function Writer::withBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:50
+EXTRA_TARGET_SYMBOL function Writer::write at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:52
+EXTRA_TARGET_SYMBOL function Writer::flush at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:78
+EXTRA_TARGET_SYMBOL function Writer::finish at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:89
+EXTRA_TARGET_SYMBOL function Writer::Companion::new at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:105
+EXTRA_TARGET_SYMBOL function Writer::Companion::newWithCapacity at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:107
+EXTRA_TARGET_SYMBOL function Writer::Companion::withOutputBuffer at src/commonMain/kotlin/io/github/kotlinmania/zstd/stream/zio/Writer.kt:110
+Inventory totals: present=43, declaration_only=0, missing=179
