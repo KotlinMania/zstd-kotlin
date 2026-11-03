@@ -5,13 +5,15 @@ Based on AST analysis, here are the concrete next steps.
 ## Summary
 
 - **Files Present:** 7/17 (41.2%)
-- **Function parity:** 78/80 matched (target 117) — 97.5%
+- **Function parity:** 94/96 matched (target 117) — 97.9%
 - **Class/type parity:** 14/14 matched (target 22) — 100.0%
-- **Combined symbol parity:** 92/94 matched (target 139) — 97.9%
-- **Average inline-code cosine:** 0.58 (function body across 7 matched files)
+- **Combined symbol parity:** 108/110 matched (target 139) — 98.2%
+- **Average inline-code cosine:** 0.13 (function body across 7 matched files)
 - **Average documentation cosine:** 0.80 (doc text across 7 matched files)
 - **Cheat-zeroed Files:** 0
-- **Critical Issues:** 5 files with <0.60 function similarity
+- **Critical Issues:** 7 files with <0.60 function similarity
+- **Needs Review:** 0 files with 0.60-0.84 function similarity
+- **Excellent:** 0 files with >=0.85 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
 
@@ -30,44 +32,44 @@ Every matched file is listed below with function and type symbol parity.
 ### 1. zio.writer
 
 - **Target:** `zio.Writer`
-- **Similarity:** 0.71
+- **Similarity:** 0.15
 - **Dependents:** 1
-- **Priority Score:** 1022102.9
+- **Priority Score:** 1022108.4
 - **Functions:** 18/20 matched (target 21)
 - **Missing functions:** `offset`, `buffer`
 - **Types:** 1/1 matched (target 2)
 - **Missing types:** _none_
 - **Tests:** 5/7 matched
 
-### 2. bulk.compressor
-
-- **Target:** `bulk.Compressor`
-- **Similarity:** 0.59
-- **Dependents:** 1
-- **Priority Score:** 1001304.1
-- **Functions:** 12/12 matched (target 18)
-- **Missing functions:** _none_
-- **Types:** 1/1 matched
-- **Missing types:** _none_
-
-### 3. zio.reader
+### 2. zio.reader
 
 - **Target:** `zio.Reader`
-- **Similarity:** 0.60
+- **Similarity:** 0.11
 - **Dependents:** 1
-- **Priority Score:** 1001304.0
+- **Priority Score:** 1001308.9
 - **Functions:** 11/11 matched (target 15)
 - **Missing functions:** _none_
 - **Types:** 2/2 matched (target 3)
 - **Missing types:** _none_
 - **Tests:** 2/2 matched
 
+### 3. bulk.compressor
+
+- **Target:** `bulk.Compressor`
+- **Similarity:** 0.15
+- **Dependents:** 1
+- **Priority Score:** 1001308.5
+- **Functions:** 12/12 matched (target 18)
+- **Missing functions:** _none_
+- **Types:** 1/1 matched
+- **Missing types:** _none_
+
 ### 4. bulk.decompressor
 
 - **Target:** `bulk.Decompressor`
-- **Similarity:** 0.59
+- **Similarity:** 0.14
 - **Dependents:** 1
-- **Priority Score:** 1001204.1
+- **Priority Score:** 1001208.6
 - **Functions:** 11/11 matched (target 12)
 - **Missing functions:** _none_
 - **Types:** 1/1 matched
@@ -76,10 +78,10 @@ Every matched file is listed below with function and type symbol parity.
 ### 5. stream.raw
 
 - **Target:** `raw.Raw`
-- **Similarity:** 0.56
+- **Similarity:** 0.10
 - **Dependents:** 0
-- **Priority Score:** 2004.4
-- **Functions:** 13/13 matched (target 33)
+- **Priority Score:** 3409.0
+- **Functions:** 27/27 matched (target 33)
 - **Missing functions:** _none_
 - **Types:** 7/7 matched (target 12)
 - **Missing types:** _none_
@@ -88,10 +90,10 @@ Every matched file is listed below with function and type symbol parity.
 ### 6. dict
 
 - **Target:** `dict.Dict`
-- **Similarity:** 0.52
+- **Similarity:** 0.12
 - **Dependents:** 0
-- **Priority Score:** 1104.8
-- **Functions:** 9/9 matched (target 14)
+- **Priority Score:** 1308.8
+- **Functions:** 11/11 matched (target 14)
 - **Missing functions:** _none_
 - **Types:** 2/2 matched (target 3)
 - **Missing types:** _none_
@@ -100,9 +102,9 @@ Every matched file is listed below with function and type symbol parity.
 ### 7. stream.functions
 
 - **Target:** `stream.Functions`
-- **Similarity:** 0.50
+- **Similarity:** 0.14
 - **Dependents:** 0
-- **Priority Score:** 405.0
+- **Priority Score:** 408.6
 - **Functions:** 4/4 matched
 - **Missing functions:** _none_
 - **Types:** 0/0 matched
