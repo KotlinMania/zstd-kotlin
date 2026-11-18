@@ -165,9 +165,4 @@ public class Compressor(
     }
 }
 
-private fun assertTraits() {
-    fun <T> assertSend(value: T) {
-        checkNotNull(value)
-    }
-    assertSend(Compressor.new(0))
-}
+// Upstream `_assert_traits` (`_assert_send::<Compressor>`) is a compile-time Rust `Send` check with no Kotlin trait equivalent.

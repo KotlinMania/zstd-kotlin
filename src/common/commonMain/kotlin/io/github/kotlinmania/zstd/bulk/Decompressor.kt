@@ -145,9 +145,4 @@ public class Decompressor(
     }
 }
 
-private fun assertTraits() {
-    fun <T> assertSend(value: T) {
-        checkNotNull(value)
-    }
-    assertSend(Decompressor.new())
-}
+// Upstream `_assert_traits` (`_assert_send::<Decompressor>`) is a compile-time Rust `Send` check with no Kotlin trait equivalent.
